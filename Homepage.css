@@ -11,6 +11,7 @@ html, body {height:80%;margin:0;}
     --eceText: #013d42;
     --pointActif: #717171;
     --pointInactif: #bbbbbb;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 :root.dark
@@ -234,6 +235,7 @@ html, body {height:80%;margin:0;}
     -ms-border-radius: 8px;
     -o-border-radius: 8px;
     margin-left: 10px;
+    border: solid;
 }
 
 .contenu a
@@ -247,14 +249,13 @@ html, body {height:80%;margin:0;}
 
 .contenu a:hover
 {
-    background: #013d42!important;
+    background: var(--eceText);
     color: white;
     transition: 0.5s;
     -webkit-transition: 0.5s;
     -moz-transition: 0.5s;
     -ms-transition: 0.5s;
     -o-transition: 0.5s;
-    border-radius: 8px;
 }
 
 .show {display:block;}
@@ -320,6 +321,8 @@ html, body {height:80%;margin:0;}
     box-sizing: border-box;
     background-color: var(--fond1);
     color: var(--textSousText);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 170px;
 }
 
 #Milieu
@@ -334,14 +337,44 @@ html, body {height:80%;margin:0;}
     margin-top: 80px;
 }
 
-#Milieu div
+.Boites
 {
     width:80%;
-    height:1500px;
-    margin:auto;
-    border:solid;
+    height:auto;
 }
 
+.SousBoites
+{
+    text-align: center;
+}
+
+.Boites, .SousBoites
+{
+    margin:auto;
+    background-color: var(--fond2);
+    padding: 10px 25px;
+    border: solid;
+    border-color: rgba(226, 232, 240, 0);
+    box-shadow: 0 4px 6px 2px rgba(0, 0, 0, 0.1), 0 2px 4px 2px rgba(0, 0, 0, 0.06);
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+#Milieu h1
+{
+    color: var(--eceText);
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+#Milieu p
+{
+    color: var(--textBase);
+    font-size: large;
+}
 
 #Footer
 {
