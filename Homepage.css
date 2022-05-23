@@ -55,6 +55,7 @@ html, body {height:80%;margin:0;}
     font-size: xx-large;
     margin: -10px;
     color: var(--fond2);
+    cursor: pointer;
 }
 
 .Precedent
@@ -213,6 +214,50 @@ html, body {height:80%;margin:0;}
     -ms-border-radius: 8px;
     -o-border-radius: 8px;
 }
+
+#MenuDeroulant
+{
+    position: relative;
+    display: inline-block;
+}
+
+.contenu
+{
+    display: none;
+    position: absolute;
+    background-color: var(--fond2);
+    color: var(--eceText);
+    min-width: 160px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    margin-left: 10px;
+}
+
+.contenu a
+{
+    color: var(--eceText);
+    padding: 12px;
+    text-decoration: none;
+    display: block;
+    font-size: large;
+}
+
+.contenu a:hover
+{
+    background: #013d42!important;
+    color: white;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    border-radius: 8px;
+}
+
+.show {display:block;}
 
 #BarreRecherche
 {
