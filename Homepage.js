@@ -65,3 +65,20 @@ function slideImg(n)
 }
 
 //#endregion
+
+//#region dark theme
+
+let darktheme = 0;
+
+function toggleRootClass()
+{
+	document.querySelector(":root").classList.toggle("dark");
+}
+
+function switchTheme()
+{
+	var element = document.querySelector(":root");
+   element.classList.toggle("dark");
+}
+
+//#endregion
