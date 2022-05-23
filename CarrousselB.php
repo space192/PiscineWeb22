@@ -1,5 +1,5 @@
 <?php
-include 'const.php';
+include_once 'const.php';
 echo('<div class="SousBoites">');
 echo('<div id="CarrouselSpecialistes" class="carousel slide" data-bs-ride="carousel">');
 echo('<div class="carousel-inner" style="background-color:white;">');
