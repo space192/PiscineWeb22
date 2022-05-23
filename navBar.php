@@ -1,8 +1,8 @@
-<header>
+<header style="z-index :10;">
     <div id="BarrePrincipale">
-        <a href="Homepage.html"><img src="images/Decor/LogoOmnesSante2.png" alt="Omnes Santé" width="50px" height="50px"></a>
+        <a href="index.php"><img src="images/Decor/LogoOmnesSante2.png" alt="Omnes Santé" width="50px" height="50px"></a>
         <div id="Navigation">
-            <form action="Homepage.html"><button type="submit">Accueil</button></form>
+            <button onclick="location.href='index.php'">Accueil</button>
             <div id="MenuDeroulant">
                 <button onclick="menuDeroulant()" class="boutounDeroulant">Tout Parcourir</button>
                 <div id="Options" class="contenu">
@@ -11,8 +11,8 @@
                     <a href="#">Laboratoire</a>
                 </div>
             </div>
-            <form action="Homepage.html"><button type="submit">Rendez-vous</button></form>
-            <form action="Medecins.png"><button type="submit">Votre Compte</button></form>
+            <button onclick="location.href='index.php'">Rendez-vous</button>
+            <button onclick="location.href='Account.php'">Votre Compte</button>
         </div>
         <div id="BarreRecherche">
             <form id="search">

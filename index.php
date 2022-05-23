@@ -33,11 +33,7 @@
                 </div>
             </section>
         </div>
-        <div id="Footer">
-            <footer>
-                <p>© COPYRIGHT MACHIN</p>
-            </footer>
-        </div>
+        <?php include 'footer.php' ?>
         <script src="Homepage.js"></script>
     </body>
 </html>

@@ -346,6 +346,7 @@ html, body {height:80%;margin:0;}
 .SousBoites
 {
     text-align: center;
+    z-index:-1;
 }
 
 .Boites, .SousBoites
