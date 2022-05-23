@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cv SYSTEM "template.dtd">
+<cv>
+    <etatCivil>
+        <nom>Ergébel</nom>
+        <prenom>Octave</prenom>
+        <age>1971</age>
+    </etatCivil>
+    <diplomes>
+        <diplome>
+            <libelle>Docteur en Médecine</libelle>
+            <annee>1999</annee>
+            <institution>Université Paris-Diderot</institution>
+        </diplome>
+        <diplome>
+            <libelle>Docteur d'andrologie</libelle>
+            <annee>1995</annee>
+            <institution>Université Paris-Diderot</institution>
+        </diplome>
+    </diplomes>
+    <experiences>
+        <experience>
+            <debut>2000</debut>
+            <fin>2011</fin>
+            <entreprise>Hopital Foch</entreprise>
+            <poste>Medecin-Andrologue</poste>
+        </experience>
+        <experience>
+            <debut>2011</debut>
+            <fin>2019</fin>
+            <entreprise>Hopital Américain de Neuilly-Sur-Seine</entreprise>
+            <poste>Medecin-Andrologue</poste>
+        </experience>
+        <experience>
+            <debut>2019</debut>
+            <fin>Présent</fin>
+            <entreprise>Omnes Santé</entreprise>
+            <poste>Medecin-Andrologue</poste>
+        </experience>
+    </experiences>
+</cv>

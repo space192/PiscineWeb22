@@ -1,0 +1,23 @@
+<!ELEMENT cv (etatCivil,diplomes,experiences)>
+
+<!ELEMENT etatCivil (nom , prenom, age)>
+
+<!ELEMENT diplomes (diplome+)>
+<!ELEMENT diplome (libelle , annee, institution)>
+
+<!ELEMENT experiences (experience+)>
+<!ELEMENT experience (debut , fin, entreprise, poste)>
+
+
+<!ELEMENT nom (#PCDATA )>
+<!ELEMENT prenom (#PCDATA )>
+<!ELEMENT age (#PCDATA )>
+
+<!ELEMENT libelle (#PCDATA )>
+<!ELEMENT annee (#PCDATA )>
+<!ELEMENT institution (#PCDATA )>
+
+<!ELEMENT debut (#PCDATA )>
+<!ELEMENT fin (#PCDATA )>
+<!ELEMENT entreprise (#PCDATA )>
+<!ELEMENT poste (#PCDATA )>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cv SYSTEM "template.dtd">
+<cv>
+    <etatCivil>
+        <nom>Faimal</nom>
+        <prenom>Aicha</prenom>
+        <age>1994</age>
+    </etatCivil>
+    <diplomes>
+        <diplome>
+            <libelle>Diplômée de L'IFSI</libelle>
+            <annee>2010</annee>
+            <institution>CH de Soisson</institution>
+        </diplome>
+        <diplome>
+            <libelle>Spécialisation en santé du travail</libelle>
+            <annee>2012</annee>
+            <institution>CH de Soisson</institution>
+        </diplome>
+    </diplomes>
+    <experiences>
+        <experience>
+            <debut>2015</debut>
+            <fin>2019</fin>
+            <entreprise>Groupe Bruneau</entreprise>
+            <poste>Infirmière en santé du travail </poste>
+        </experience>
+        <experience>
+            <debut>2019</debut>
+            <fin>Présent</fin>
+            <entreprise>Omnes Santé</entreprise>
+            <poste>Infirmière en santé du travail </poste>
+        </experience>
+    </experiences>
+</cv>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cv SYSTEM "template.dtd">
+<cv>
+    <etatCivil>
+        <nom>Chon</nom>
+        <prenom>Dénis</prenom>
+        <age>1979</age>
+    </etatCivil>
+    <diplomes>
+        <diplome>
+            <libelle>Docteur en médecine</libelle>
+            <annee>2003</annee>
+            <institution>Université Paris Descartes</institution>
+        </diplome>
+        <diplome>
+            <libelle>Spécialisation Gynécologique-obstétrique</libelle>
+            <annee>2007</annee>
+            <institution>Université Paris Descartes</institution>
+        </diplome>
+    </diplomes>
+    <experiences>
+        <experience>
+            <debut>2008</debut>
+            <fin>2017</fin>
+            <entreprise>Maternité chu Rouen</entreprise>
+            <poste>Gynécologue-obstétricien </poste>
+        </experience>
+        <experience>
+            <debut>2017</debut>
+            <fin>présent</fin>
+            <entreprise>Omnes Santé</entreprise>
+            <poste>Gynécologue-obstétricien </poste>
+        </experience>
+    </experiences>
+</cv>

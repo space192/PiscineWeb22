@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cv SYSTEM "template.dtd">
+<cv>
+    <etatCivil>
+        <nom></nom>
+        <prenom></prenom>
+        <age></age>
+    </etatCivil>
+    <diplomes>
+        <diplome>
+            <libelle></libelle>
+            <annee></annee>
+            <institution></institution>
+        </diplome>
+    </diplomes>
+    <experiences>
+        <experience>
+            <debut></debut>
+            <fin></fin>
+            <entreprise></entreprise>
+            <poste></poste>
+        </experience>
+    </experiences>
+</cv>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cv SYSTEM "template.dtd">
+<cv>
+    <etatCivil>
+        <nom>Remor</nom>
+        <prenom>Yves</prenom>
+        <age>1986</age>
+    </etatCivil>
+    <diplomes>
+        <diplome>
+            <libelle>Docteur en médecine</libelle>
+            <annee>2000</annee>
+            <institution>Université Paris-Saclay</institution>
+        </diplome>
+        <diplome>
+            <libelle>Diplome Universitaire en addictologie</libelle>
+            <annee>1997</annee>
+            <institution>Université de Caen</institution>
+        </diplome>
+        <diplome>
+            <libelle>Cours Psycologie anti-drogue</libelle>
+            <annee>2017</annee>
+            <institution>e-learning</institution>
+        </diplome>
+    </diplomes>
+    <experiences>
+        <experience>
+            <debut>2015</debut>
+            <fin>présent</fin>
+            <entreprise>Omnes Santé</entreprise>
+            <poste>Médecin-Addictologue</poste>
+        </experience>
+    </experiences>
+</cv>

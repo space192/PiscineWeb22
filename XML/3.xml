@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cv SYSTEM "template.dtd">
+<cv>
+    <etatCivil>
+        <nom>Tuission</nom>
+        <prenom>Alain</prenom>
+        <age>1968</age>
+    </etatCivil>
+    <diplomes>
+        <diplome>
+            <libelle>Docteur en médecine</libelle>
+            <annee>1988</annee>
+            <institution>Université Sorbonne</institution>
+        </diplome>
+        <diplome>
+            <libelle>Diplome d'études spécialisées Cardiologie et Maldies vasculaires</libelle>
+            <annee>2000</annee>
+            <institution>Paris Saclay</institution>
+        </diplome>
+    </diplomes>
+    <experiences>
+        <experience>
+            <debut>2007</debut>
+            <fin>2018</fin>
+            <entreprise>Georges Pompidou</entreprise>
+            <poste>Medecin-Cardiologue</poste>
+        </experience>
+        <experience>
+            <debut>2018</debut>
+            <fin>présent</fin>
+            <entreprise>Omnes Santé</entreprise>
+            <poste>Medecin-Cardiologue</poste>
+        </experience>
+    </experiences>
+</cv>

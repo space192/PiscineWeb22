@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cv SYSTEM "template.dtd">
+<cv>
+    <etatCivil>
+        <nom>Téziste</nom>
+        <prenom>Agnès</prenom>
+        <age>1982</age>
+    </etatCivil>
+    <diplomes>
+        <diplome>
+            <libelle>Docteur en Médecine</libelle>
+            <annee>2002</annee>
+            <institution>Université Pierre et Maire Curie</institution>
+        </diplome>
+    </diplomes>
+    <experiences>
+        <experience>
+            <debut>2012</debut>
+            <fin>2021</fin>
+            <entreprise>Libérale</entreprise>
+            <poste>Médecin-Généraliste</poste>
+        </experience>
+        <experience>
+            <debut>2021</debut>
+            <fin>présent</fin>
+            <entreprise>Omnes Santé</entreprise>
+            <poste>Médecin-Généraliste</poste>
+        </experience>
+    </experiences>
+</cv>

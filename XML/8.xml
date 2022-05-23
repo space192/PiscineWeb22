@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cv SYSTEM "template.dtd">
+<cv>
+    <etatCivil>
+        <nom>Pyration</nom>
+        <prenom>Alex</prenom>
+        <age>1975</age>
+    </etatCivil>
+    <diplomes>
+        <diplome>
+            <libelle>Diplomée en Ostéopathie</libelle>
+            <annee>1990</annee>
+            <institution>Ostéopathie de Paris</institution>
+        </diplome>
+    </diplomes>
+    <experiences>
+        <experience>
+            <debut>1998</debut>
+            <fin>2020</fin>
+            <entreprise>Libéral</entreprise>
+            <poste>Ostéopathe</poste>
+        </experience>
+        <experience>
+            <debut>2020</debut>
+            <fin>présent</fin>
+            <entreprise>Omnes Santé</entreprise>
+            <poste>Osthéopathe</poste>
+        </experience>
+    </experiences>
+</cv>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cv SYSTEM "template.dtd">
+<cv>
+    <etatCivil>
+        <nom>Ratiffe</nom>
+        <prenom>Luc</prenom>
+        <age>1970</age>
+    </etatCivil>
+    <diplomes>
+        <diplome>
+            <libelle>Docteur en médecine</libelle>
+            <annee>1990</annee>
+            <institution>Université de Nantes</institution>
+        </diplome>
+        <diplome>
+            <libelle>Spécialisation en Dermatologie</libelle>
+            <annee>1995</annee>
+            <institution>Université de Nantes</institution>
+        </diplome>
+    </diplomes>
+    <experiences>
+        <experience>
+            <debut>1996</debut>
+            <fin>2013</fin>
+            <entreprise>Etat Français</entreprise>
+            <poste>Médécin-Dermatologue</poste>
+        </experience>
+        <experience>
+            <debut>2013</debut>
+            <fin>Présent</fin>
+            <entreprise>Omnes Santé</entreprise>
+            <poste>Médécin-Dermatologue</poste>
+        </experience>
+    </experiences>
+</cv>

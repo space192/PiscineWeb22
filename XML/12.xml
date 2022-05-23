@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cv SYSTEM "template.dtd">
+<cv>
+    <etatCivil>
+        <nom>Liguili</nom>
+        <prenom>Guy</prenom>
+        <age>1984</age>
+    </etatCivil>
+    <diplomes>
+        <diplome>
+            <libelle>Docteur en médecine</libelle>
+            <annee>1998</annee>
+            <institution>Université Strasbourg</institution>
+        </diplome>
+    </diplomes>
+    <experiences>
+        <experience>
+            <debut>2015</debut>
+            <fin>2021</fin>
+            <entreprise>Médecin-Urgentiste</entreprise>
+            <poste>CHRU Strarbourg</poste>
+        </experience>
+        <experience>
+            <debut>2021</debut>
+            <fin>Présent</fin>
+            <entreprise>Omnes Santé</entreprise>
+            <poste>Médecin-Généraliste</poste>
+        </experience>
+    </experiences>
+</cv>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cv SYSTEM "template.dtd">
+<cv>
+    <etatCivil>
+        <nom>Iléausud</nom>
+        <prenom>Eléonore</prenom>
+        <age>1965</age>
+    </etatCivil>
+    <diplomes>
+        <diplome>
+            <libelle>Docteure en médecine</libelle>
+            <annee>1980</annee>
+            <institution>Université de Lille 2</institution>
+        </diplome>
+        <diplome>
+            <libelle>Diplôme en pédiatrie</libelle>
+            <annee>1985</annee>
+            <institution>Université de Lille 2</institution>
+        </diplome>
+    </diplomes>
+    <experiences>
+        <experience>
+            <debut>2000</debut>
+            <fin>2016</fin>
+            <entreprise>Libérale</entreprise>
+            <poste>Médecin-Pédiatre</poste>
+        </experience>
+        <experience>
+            <debut>2016</debut>
+            <fin>présent</fin>
+            <entreprise>Omnes Santé</entreprise>
+            <poste>Médecin-Généraliste et pédiatrique</poste>
+        </experience>
+    </experiences>
+</cv>

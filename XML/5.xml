@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cv SYSTEM "template.dtd">
+<cv>
+    <etatCivil>
+        <nom>Tommye</nom>
+        <prenom>Anna</prenom>
+        <age>1986</age>
+    </etatCivil>
+    <diplomes>
+        <diplome>
+            <libelle>Docteur en Médecine</libelle>
+            <annee>1990</annee>
+            <institution>Université Partis Diderot</institution>
+        </diplome>
+        <diplome>
+            <libelle>Spécialisation Gastro-entérologie et hépatologie</libelle>
+            <annee>1995</annee>
+            <institution>Université Partis Diderot</institution>
+        </diplome>
+    </diplomes>
+    <experiences>
+        <experience>
+            <debut>2018</debut>
+            <fin>2020</fin>
+            <entreprise>CHU Pitié-Salpêtrière</entreprise>
+            <poste>Gastro-Hépato-Entérologue</poste>
+        </experience>
+        <experience>
+            <debut>2020</debut>
+            <fin>Présent</fin>
+            <entreprise>Omnes Santé</entreprise>
+            <poste>Gastro-Hépato-Entérologue</poste>
+        </experience>
+    </experiences>
+</cv>
