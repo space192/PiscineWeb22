@@ -1,0 +1,35 @@
+
+
+#BarrePrincipale
+{
+    overflow: hidden;
+}
+
+#Darkmode
+{
+    margin-top: 50px;
+}
+
+#Milieu
+{
+    background-color: var(--fond1);
+    padding: 40px 16px 30px 16px;
+    z-index: -5;
+}
+
+.Sticky
+{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.Sticky + #Milieu
+{
+    padding-top: 100px;
+}
+
+#Milieu div
+{
+    height: 1550px;
+}

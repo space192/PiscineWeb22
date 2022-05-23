@@ -31,14 +31,6 @@ body
     color: var(--textBase);
 }
 
-#Toutenhaut
-{
-    background-color: var(--fond2);
-    height: 90%;
-    margin-bottom: 50px;
-    padding-top: 10px;
-    text-align: center;
-}
 
 #Darkmode
 {
@@ -63,112 +55,13 @@ body
     cursor: pointer;
 }
 
-.Precedent
-{
-    position: absolute;
-    cursor: pointer;
-    top: 250px;
-    padding: 16px;
-    color: var(--textBase);
-    font-size: 20px;
-    user-select: none;
-    left: 0;
-}
 
-.Suivant
-{
-    position: absolute;
-    cursor: pointer;
-    top: 250px;
-    padding: 16px;
-    color: var(--textBase);
-    font-size: 20px;
-    user-select: none;
-    right: 0;
-}
-
-.Precedent:hover, .Suivant:hover
-{
-    background-color: #013d4286;
-    text-decoration: none;
-}
-
-.LegendeCaroussel
-{
-    color: whitesmoke;
-    position: absolute;
-    background-color: #252526e0;
-    padding: 10px;
-    text-align: center;
-    top: 45%;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.Carrousel
-{
-    display: none;
-    height: 90%;
-}
-
-.Carrousel img
-{
-    height: 100%;
-}
-
-#LesPoints
-{
-    text-align: center;
-    position: relative;
-    top: -10px;
-}
-
-.Point
-{
-    cursor: pointer;
-    height: 16px;
-    width: 16px;
-    margin: 0 2px;
-    background-color: var(--pointInactif);
-    border-radius: 50%;
-    display: inline-block;
-}
-
-.active, .Point:hover
-{
-    background-color: var(--pointActif);
-    transition: 0.4s;
-    -webkit-transition: 0.4s;
-    -moz-transition: 0.4s;
-    -ms-transition: 0.4s;
-    -o-transition: 0.4s;
-}
-
-#Wrapper
-{
-    margin-top: -80px;
-}
 
 #Wrapper header
 {
     height: 80px;
     background-color: var(--ece);;
     color: var(--fond1);;
-}
-
-#Wrapper header.fixed
-{
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-}
-
-#Wrapper header.fixed+#Milieu
-{
-    margin-top: 80px;
 }
 
 #BarrePrincipale
