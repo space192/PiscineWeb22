@@ -54,9 +54,14 @@ html, body {height:80%;margin:0;}
     background-color: transparent;
     border: none;
     font-size: xx-large;
-    margin: -10px;
+    margin: -10px -5px -20px -5px;
     color: var(--fond2);
     cursor: pointer;
+}
+
+#Toutenhaut a
+{
+    text-decoration: none;
 }
 
 .Precedent
@@ -86,6 +91,7 @@ html, body {height:80%;margin:0;}
 .Precedent:hover, .Suivant:hover
 {
     background-color: #013d4286;
+    text-decoration: none;
 }
 
 .LegendeCaroussel
@@ -191,7 +197,6 @@ html, body {height:80%;margin:0;}
     background-color: transparent;
     color: var(--eceText);
     height: 60px;
-    padding: 16px;
     z-index: 1;
     border: none;
     cursor: pointer;
@@ -315,7 +320,7 @@ html, body {height:80%;margin:0;}
 #Recherche input
 {
     border: none;
-    height: 60px;
+    height: 57px;
     line-height: 16px;
     outline: none;
     box-sizing: border-box;
@@ -375,6 +380,24 @@ html, body {height:80%;margin:0;}
 {
     color: var(--textBase);
     font-size: large;
+}
+
+#CarrouselSpecialistes
+{
+    background-color: var(--fond2);
+}
+
+.carousel-inner h2
+{
+    background-color: var(--fond2);
+    color: var(--textSousText);
+}
+
+.carousel-inner img
+{
+    object-fit: contain;
+    aspect-ratio: 2/1;
+    background-color: var(--fond2);
 }
 
 #Footer
