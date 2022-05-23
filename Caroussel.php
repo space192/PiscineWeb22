@@ -2,7 +2,7 @@
 include 'const.php';
 foreach($imgCarrousel as $elem)
 {
-    echo('<div class="Carrousel">');
+    echo('<div class="Carrousel" >');
     echo('<img src="' . $elem["img"] . '">');
     echo('<div class="LegendeCaroussel">' . $elem["legend"] .'</div>');
     echo('</div>');

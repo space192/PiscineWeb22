@@ -12,10 +12,10 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     </head>
     <body>
-        <div id="Toutenhaut">
+        <!-- <div id="Toutenhaut">
             <div id="Darkmode"><button onclick="switchTheme()" title="Changer de thème de couleur">◐</button></div>
         <?php include 'Caroussel.php'?>
-        </div>
+        </div> -->
         <div id="Wrapper">
             <?php include 'navBar.php'?>
             <section id="Milieu">
