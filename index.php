@@ -37,48 +37,7 @@
                     <p>Mettre une info bidon.</p>
                     <h1>Les spécialistes de santé Omnes Santé</h1>
                     <p>Carrousel supplémentaire ou simplement des fiches profil.</p>
-                    <div class="SousBoites">
-                        <div id="CarrouselSpecialistes" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <h2>Aïcha Fémal</h2>
-                                    <img src="images/Specialistes/Aicha_Femal.jpg" class="d-block w-100" alt="Aïcha_Fémal">
-                                </div>
-                                <div class="carousel-item">
-                                    <h2>Alain Tuission</h2>
-                                    <img src="images/Specialistes/Alain_Tuission.jpg" class="d-block w-100" alt="Alain Tuission">
-                                </div>
-                                <div class="carousel-item">
-                                    <h2>Alex Pyration</h2>
-                                    <img src="images/Specialistes/Alex_Pyration.jpg" class="d-block w-100" alt="Alex_Pyration">
-                                </div>
-                                <div class="carousel-item">
-                                    <h2>Dénis Chon</h2>
-                                    <img src="images/Specialistes/Denis_Chon.jpg" class="d-block w-100" alt="Dénis_Chon">
-                                </div>
-                                <div class="carousel-item">
-                                    <h2>Luc Ratiffe</h2>
-                                    <img src="images/Specialistes/Luc_Ratiffe.jpg" class="d-block w-100" alt="Luc_Ratiffe">
-                                </div>
-                                <div class="carousel-item">
-                                    <h2>Octave Ergébel</h2>
-                                    <img src="images/Specialistes/Octave_Ergebel.jpg" class="d-block w-100" alt="Octave_Ergebel">
-                                </div>
-                                <div class="carousel-item">
-                                    <h2>Yves Remor</h2>
-                                    <img src="images/Specialistes/Yves_Remor.jpg" class="d-block w-100" alt="Yves_Remor">
-                                </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#CarrouselSpecialistes" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#CarrouselSpecialistes" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
-                          </div>
-                    </div>
+                    <?php include 'CarrousselB.php' ?>
                 </div>
             </section>
         </div>

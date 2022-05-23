@@ -22,4 +22,34 @@ $imgCarrousel = [
     ],
 ];
 
+$imgSpe = [
+    [
+        "nom" => "Aïcha Fémal",
+        "img" => "images/Specialistes/Aicha_Femal.jpg",
+    ],
+    [
+        "nom" => "Alain Tuission",
+        "img" => "images/Specialistes/Alain_Tuission.jpg",
+    ],
+    [
+        "nom" => "Alex Pyration",
+        "img" => "images/Specialistes/Alex_Pyration.jpg",
+    ],
+    [
+        "nom" => "Dénis Chon",
+        "img" => "images/Specialistes/Denis_Chon.jpg",
+    ],
+    [
+        "nom" => "Luc Ratiffe",
+        "img" => "images/Specialistes/Luc_Ratiffe.jpg",
+    ],
+    [
+        "nom" => "Octave Ergébel",
+        "img" => "images/Specialistes/Octave_Ergebel.jpg",
+    ],
+    [
+        "nom" => "Yves Remor",
+        "img" => "images/Specialistes/Yves_Remor.jpg",
+    ],
+];
 ?>
