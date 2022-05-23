@@ -19,7 +19,11 @@
             <?php include 'navBar.php'?>
             <section id="Milieu">
                 <div class="Boites">
-                <h1>Informations de Santé publique</h1>
+                    <h1>Informations de Santé publique</h1>
+                    <p>Bienvenue sur Omnes Santé. Accédez <b>rapidement</b> aux disponibilités de tous vos professionnels de santé. Prenez des décisions <b>éclairées</b> et adaptées à vos besoins de santé.<br>
+                    Réservez une consultation physique ou vidéo chez votre professionnel de santé en quelques clics.</p>
+                    <br>
+                    <h1>Informations de Santé publique</h1>
                     <br>
                     <div class="SousBoites">
                         <a class="twitter-timeline" data-lang="fr" data-width="700" data-height="800" data-dnt="true" data-theme="dark" href="https://twitter.com/Sante_Gouv?ref_src=twsrc%5Etfw">Tweets by Sante_Gouv</a> 
