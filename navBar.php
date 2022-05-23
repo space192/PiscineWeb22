@@ -3,7 +3,6 @@
         <a href="index.php"><img src="images/Decor/LogoOmnesSante2.png" alt="Omnes Santé" width="50px" height="50px"></a>
         <div id="Navigation">
             <button onclick="location.href='index.php'">Accueil</button>
-            <form action="Homepage.php"><button type="submit">Accueil</button></form>
             <div id="MenuDeroulant">
                 <button onclick="menuDeroulant()" class="boutounDeroulant">Tout Parcourir</button>
                 <div id="Options" class="contenu">
@@ -14,8 +13,6 @@
             </div>
             <button onclick="location.href='index.php'">Rendez-vous</button>
             <button onclick="location.href='Account.php'">Votre Compte</button>
-            <form action="Homepage.html"><button type="submit">Rendez-vous</button></form>
-            <form action="Account.php"><button type="submit">Votre Compte</button></form>
         </div>
         <div id="BarreRecherche">
             <form id="search">

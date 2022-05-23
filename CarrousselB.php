@@ -15,7 +15,7 @@ foreach($imgSpe as $spe)
     {
         echo('<div class="carousel-item">');
     }
-    echo('<div style="background-color :white;">');
+    echo('<div class="CarrouselBandeRelou">');
     echo('<h2>'. $spe["nom"] .'</h2>');
     echo('<img src="'. $spe["img"] .'" class="d-block w-100" alt="Aïcha_Fémal">');
     echo('</div>');
