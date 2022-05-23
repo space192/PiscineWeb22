@@ -2,7 +2,7 @@
 
 #BarrePrincipale
 {
-    overflow: hidden;
+    overflow :visible;
 }
 
 #Darkmode
@@ -14,7 +14,6 @@
 {
     background-color: var(--fond1);
     padding: 40px 16px 30px 16px;
-    z-index: -5;
 }
 
 .Sticky
