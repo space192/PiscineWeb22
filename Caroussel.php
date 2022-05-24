@@ -1,5 +1,5 @@
 <?php
-include_once 'const.php';
+include 'const.php';
 foreach($imgCarrousel as $elem)
 {
     echo('<div class="Carrousel" >');
