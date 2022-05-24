@@ -7,7 +7,7 @@
                 <button onclick="menuDeroulant()" class="boutounDeroulant">Tout Parcourir</button>
                 <div id="Options" class="contenu">
                     <a href='Medecins.php'>Médecin généraliste</a>
-                    <a href="#">Médecin spécialiste</a>
+                    <a href='MedecinsS.php'>Médecin spécialiste</a>
                     <a href="#">Laboratoire</a>
                 </div>
             </div>
