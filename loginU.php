@@ -2,13 +2,13 @@
     <form method="post" action="queryAccount.php">
         <br>
         <!-- Email input -->
-        <div class="form mb-3">
+        <div class="form-floating mb-3">
             <input type="email" name="Mail" class="form-control" id="floatingInput" placeholder="name@example.com">
             <label for="floatingInput">Email address</label>
         </div>
 
         <!-- Password input -->
-        <div class="form">
+        <div class="form-floating">
             <input type="password" name="pwd" class="form-control" id="floatingPasswordL" placeholder="Password">
             <label for="floatingPasswordL">Password</label>
         </div>

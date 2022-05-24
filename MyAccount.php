@@ -67,7 +67,7 @@
                 </h2>
                 <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushDomicile">
                     <div class="accordion-body">
-                        <div class="Actuel">Adresse actuelle : <?php echo($result["Adresse_ligne1"]); if(isset($result["Adresse_ligne2"])): echo($result["Adresse_ligne2"]); endif;?></div>
+                        <div class="Actuel">Adresse actuelle : <?php echo($result["Adresse_ligne1"]); if(isset($result["Adresse_ligne2"])): echo(" - ". $result["Adresse_ligne2"]); endif;?></div>
                         <div class="input-group mb-3">
                             <input type="text" class="form-control" placeholder="Adresse ligne 1" aria-label="AdresseL1" aria-describedby="button-addon2">
                             <input type="text" class="form-control" placeholder="Adresse ligne 2" aria-label="AdresseL2" aria-describedby="button-addon2">

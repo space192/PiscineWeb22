@@ -24,7 +24,7 @@
     --pointActif: whitesmoke;
     --pointInactif: grey;
 }
-
+html, body { min-height: 100%; }
 body
 {
     background-color: var(--fond1);
