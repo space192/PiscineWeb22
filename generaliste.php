@@ -14,7 +14,7 @@ $memberStatement = $mysqlConnection->prepare("SELECT * FROM Medecin WHERE  spe =
 $memberStatement->execute();
 $result = $memberStatement->fetchAll();
 
-
+echo ('<div id="contenant">');
 echo ('<div id="deroulant">');
 foreach ($result as $elem) {
 
@@ -22,7 +22,6 @@ foreach ($result as $elem) {
     $memberStatement = $mysqlConnection->prepare("SELECT dispo FROM Plage_horraire WHERE ID_Medecin = $id  ");
     $memberStatement->execute();
     $plages = $memberStatement->fetch();
-
     echo ('<div id="card">
         <div id="options">
         <div id="profil">
@@ -37,7 +36,7 @@ foreach ($result as $elem) {
     echo('</div><div id="details">
          <button id="button"  onclick="showContact(');
     echo ($plages[0] . $id);
-    echo (')">Prendre un rendez vous</button>
+    echo (')">Prendre un rendez vous </button>
             <button id="button"  onclick="showChat()">Communiquez avec le médecin</button>
             <button id="button"  onclick="showContact()">Voir son CV</button>
             </div> </div><div id="general">
@@ -83,4 +82,5 @@ foreach ($result as $elem) {
     echo ('</tr></tbody></table></div></div>
     ');
 }
+echo ('</div>');
 echo ('</div>');

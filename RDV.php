@@ -52,8 +52,9 @@
                 } catch (Exception $e) {
                     die('Erreur :' . $e->getMessage());
                 } 
-
+                
                 $data =  $_COOKIE["test1"];
+                $data = substr($data,1);
                 $id = substr($data,12);
                 $memberStatement = $mysqlConnection->prepare("SELECT * FROM EDT_Medecin WHERE ID_Medecin = $id ;");
                 $memberStatement->execute();
