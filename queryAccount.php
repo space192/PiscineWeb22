@@ -21,14 +21,17 @@ function loginM()
     if(isset($_POST["Prenom"]) && isset($_POST["Nom"]) && isset($_POST["Mail"]))
     {
         global $mysqlConnection;
-        $memberStatement = $mysqlConnection->prepare("SELECT * FROM Medecin WHERE Prenom='". $_POST["Prenom"] ."' AND Nom='". $_POST["Nom"] ."';");
-        if($memberStatement->execute())
+        $memberStatement = $mysqlConnection->prepare("SELECT * FROM Medecin WHERE LOWER(Prenom)='". strtolower($_POST["Prenom"]) ."' AND LOWER(Nom)='". strtolower($_POST["Nom"]) ."' AND LOWER(Mail)='" . strtolower($_POST["Mail"]) . "';");
+        $memberStatement->execute();
+        $result = $memberStatement->fetch();
+        if($result != False)
         {
-            $result = $memberStatement->fetchAll();
+            echo("oui");
             return $result;
         }
         else
         {
+            echo("non");
             return false;
         }
     }
@@ -36,11 +39,10 @@ function loginM()
 
 function loginU()
 {
-
     if(isset($_POST["Mail"]) && isset($_POST["pwd"]) )
     {
         global $mysqlConnection;
-        $memberStatement = $mysqlConnection->prepare("SELECT ID,Mail FROM utilisateur WHERE Mail='". $_POST["Mail"] ."' AND pwd='". hash('sha256', $_POST['pwd']) ."';");
+        $memberStatement = $mysqlConnection->prepare("SELECT ID,Mail FROM utilisateur WHERE LOWER(Mail)='". strtolower($_POST["Mail"]) ."' AND pwd='". hash('sha256', $_POST['pwd']) ."';");
         $memberStatement->execute();
         $result = $memberStatement->fetch();
         if($result != False)
