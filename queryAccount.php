@@ -106,7 +106,7 @@ function InsertUIntoBDD()
     {
         global $mysqlConnection;
         $sql = "";
-        if(isset($POST["Adresse_ligne2"]) && isset($POST["Adresse_ligne1"]))
+        if(isset($_POST["Adresse_ligne2"]) && isset($_POST["Adresse_ligne1"]))
         {
             $sql = "INSERT INTO utilisateur (Nom, Prenom, Telephone,Mail,Adresse_ligne1,Adresse_ligne2,Ville,Code_postal,Pays,Carte_vital, pwd) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
             $stmt= $mysqlConnection->prepare($sql);
