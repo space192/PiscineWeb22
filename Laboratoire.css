@@ -27,8 +27,8 @@
 #Darkmode
 {
     position: absolute;
-    right: 5px;
-    top:5px;
+    right: 10px;
+    top:15px;
     background-color: var(--ece2);
     padding: 15px;
     border-radius: 0.5rem;
@@ -47,103 +47,97 @@
     color: var(--fond2);
 }
 
-#BarreHaute
+#Wrapper header
 {
-    background-color: var(--ece);
-    color: var(--fond1);
+    height: 80px;
+    background-color: var(--ece);;
+    color: var(--fond1);;
+}
+
+#BarrePrincipale
+{
+    overflow :visible;
+}
+
+#Milieu
+{
+    background-color: var(--fond1);
+    padding: 40px 16px 30px 16px;
+}
+
+.Sticky
+{
     position: fixed;
-    width: 100%;
     top: 0;
-    left: 0;
+    width: 100%;
+    z-index : 10;
+}
+
+.Sticky + #Milieu
+{
+    padding-top: 100px;
+}
+#boite
+{
     display: flex;
 }
 
-#Navigation
+#infos
 {
-    background-color: var(--fond1);;
-    margin: 10px;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -ms-border-radius: 8px;
-    -o-border-radius: 8px;
-    margin-left: 270px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+    background-color: var(--fond1);
+    color: var(--eceText);
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    width:35%;
+}
+
+#Services
+{
+    text-align: center;
+    background-color: transparent;
+    color: blue;
+    margin-left: auto;
     margin-right: auto;
     display: flex;
+    width: 65%;
 }
 
-#Navigation button
+#Services button
 {
-    background-color: transparent;
-    color: var(--eceText);
-    height: 60px;
-    padding: 16px;
-    z-index: 1;
-    border: none;
-    cursor: pointer;
-    margin-left: 10px;
-    margin-right: 10px;
-    font-size: x-large;
-}
-
-#Navigation button:hover
-{
-    background: #013d42!important;
-    color: white;
-    transition: 0.5s;
-    -webkit-transition: 0.5s;
-    -moz-transition: 0.5s;
-    -ms-transition: 0.5s;
-    -o-transition: 0.5s;
-    border-radius: 8px;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -ms-border-radius: 8px;
-    -o-border-radius: 8px;
-}
-
-#MenuDeroulant
-{
-    position: relative;
-    display: inline-block;
-}
-
-.contenu
-{
-    display: none;
-    position: absolute;
-    background-color: var(--fond2);
-    color: var(--eceText);
-    min-width: 160px;
-    border-radius: 8px;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -ms-border-radius: 8px;
-    -o-border-radius: 8px;
-    margin-left: 10px;
-}
-
-.contenu a
-{
-    color: var(--eceText);
-    padding: 12px;
-    text-decoration: none;
-    display: block;
+    padding: 5px;
     font-size: large;
+    font-weight: bold;
+    text-align: center;
 }
-
-.contenu a:hover
-{
-    background: #013d42!important;
-    color: white;
-    transition: 0.5s;
-    -webkit-transition: 0.5s;
-    -moz-transition: 0.5s;
-    -ms-transition: 0.5s;
-    -o-transition: 0.5s;
-    border-radius: 8px;
-}
-
-.show {display:block;}
-
+.collapsible {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active, .collapsible:hover {
+    background-color: #ccc;
+  }
+  
+  /* Style the collapsible content. Note: hidden by default */
+  .content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+  }
