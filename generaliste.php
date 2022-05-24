@@ -10,7 +10,7 @@ try {
 } catch (Exception $e) {
     die('Erreur :' . $e->getMessage());
 }
-$memberStatement = $mysqlConnection->prepare("SELECT * FROM Medecin;");
+$memberStatement = $mysqlConnection->prepare("SELECT * FROM Medecin WHERE  spe = 0;");
 $memberStatement->execute();
 $result = $memberStatement->fetchAll();
 
@@ -19,14 +19,14 @@ echo ('<div id="deroulant">');
 foreach ($result as $elem) {
 
     $id = $elem["ID"];
-    $memberStatement = $mysqlConnection->prepare("SELECT dispo FROM Plage_horraire WHERE ID_Medecin = $id ;");
+    $memberStatement = $mysqlConnection->prepare("SELECT dispo FROM Plage_horraire WHERE ID_Medecin = $id  ");
     $memberStatement->execute();
     $plages = $memberStatement->fetch();
 
     echo ('<div id="card">
         <div id="options">
         <div id="profil">
-        <div id="titre">');
+        <div id="titre" >');
     echo ($elem["Nom"] . " " . $elem["Prenom"]);
     echo ('</div>');
 
