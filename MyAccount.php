@@ -188,6 +188,8 @@
     <br>
     <div class="SousBoites" id="Deco">
         <h3>Se déconecter</h3>
-        <button class="btn btn-danger">Se déconecter</button>
+        <form action=<?php session_destroy()?>>
+            <button type="submit" class="btn btn-danger">Se déconecter</button>
+        </form>
     </div>
 </div>
