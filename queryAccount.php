@@ -1,13 +1,22 @@
 <?php
-include 'const.php';
+include_once 'const.php';
 function getAccount()
 {
-    if($_POST["type"] && $_POST["ID"])
+    if(isset($_COOKIE["Mail"]))
+    {
+        $temp = $_COOKIE["Mail"];
+    }
+    else if(isset($_SESSION["LOGGED"]))
+    {
+        $temp = $_SESSION["LOGGED"];
+    }
+    
+    if(isset($temp))
     {
         global $mysqlConnection;
-        $memberStatement = $mysqlConnection->prepare("SELECT * FROM ". $_POST["type"] ." WHERE ID='". $_POST["ID"] ."';");
+        $memberStatement = $mysqlConnection->prepare("SELECT * FROM utilisateur WHERE LOWER(Mail)='". strtolower($temp) ."';");
         $memberStatement->execute();
-        $result = $memberStatement->fetchAll();
+        $result = $memberStatement->fetch();
         return $result;
     }
     else
@@ -47,12 +56,26 @@ function loginU()
         $result = $memberStatement->fetch();
         if($result != False)
         {
-            echo("oui");
+            if(isset($_POST["souvenir"]))
+            {
+                setcookie(
+                    'LOGGED_USER',
+                    $_POST["Mail"],
+                    [
+                        'expires' => time() + 365*24*3600,
+                        'secure' => true,
+                        'httponly' => true,
+                    ]
+                );
+            }
+            else
+            {
+                $_SESSION["LOGGED"] = $_POST["Mail"];
+            }
             return $result;
         }
         else
         {
-            echo("non");
             return false;
         }
     }
@@ -78,7 +101,7 @@ function InsertUIntoBDD()
 {
     if(!isset($_POST["Nom"]) || !isset($_POST["Prenom"]) || !isset($_POST["Telephone"]) || !isset($_POST["Mail"]) || (!isset($_POST["Adresse_ligne1"]) && !isset($_POST["Adresse_ligne2"])) || !isset($_POST["Ville"]) || !isset($_POST["Code_postal"]) || !isset($_POST["Pays"])|| !isset($_POST["Carte_vital"]))
     {
-        return false;
+        die;
     }
     else
     {
@@ -118,17 +141,12 @@ if(isset($_POST["query"]))
 {
     switch($_POST["query"])
     {
-        case 0: getAccount(); break; //recuperer un compte
         case 1: InsertUIntoBDD(); break; //insererUser dans la BDD
         case 2: InsertMIntoBDD(); break; //inserMedecin dans la BDD
         case 3: loginM(); break; //login pour les medecins
         case 4: loginU(); break; //login pour les useurs
     }
-    //header('Location: Account.php');
-    //die();
-}
-else
-{
-    die;
+    header('Location: Account.php');
+    die();
 }
 ?>

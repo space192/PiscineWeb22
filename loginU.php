@@ -12,9 +12,11 @@
             <input type="password" name="pwd" class="form-control" id="floatingPasswordL" placeholder="Password">
             <label for="floatingPasswordL">Password</label>
         </div>
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">Se Souvenir</label>
+        <div style="margin-left : 35%;text-align : left;">
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name="souvenir">
+                <label class="form-check-label" for="flexSwitchCheckChecked">Se souvenir de moi</label>
+            </div>
         </div>
         <br>
         <input hidden name="query" value="4" />
