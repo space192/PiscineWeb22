@@ -28,7 +28,58 @@
     padding-top: 100px;
 }
 
-#Milieu div
+.SousBoites button
 {
-    height: 1550px;
+    background-color: transparent;
+    color: var(--eceText);
+    height: 60px;
+    z-index: 1;
+    border: solid;
+    cursor: pointer;
+}
+
+.SousBoites button:hover
+{
+    background: #013d42!important;
+    color: white;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+.SousBoites input
+{
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    background-color: var(--fond1);
+    color: var(--textSousText);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.form-floating
+{
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    background-color: var(--fond1);
+    color: var(--textSousText);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.SousBoites input:focus
+{
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    background-color: var(--fond1);
+    color: var(--textSousText);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
