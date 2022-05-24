@@ -1,0 +1,77 @@
+.Boites div
+{
+    background-color: var(--fond2);
+}
+
+h3
+{
+    color: var(--textSousText);
+}
+.accordion-item
+{
+    border: 1px solid #013d4286;
+
+}
+
+#accordionFlushIdentite button, #accordionFlushDomicile button, #accordionFlushContact button, #accordionFlushConnexion button
+{
+    color: var(--eceText);
+    background-color: var(--fond1);
+    border-radius: 8px;
+}
+
+#accordionFlushIdentite button:hover, #accordionFlushDomicile button:hover, #accordionFlushContact button:hover, #accordionFlushConnexion button:hover
+{
+    background: #013d42!important;
+    color: white;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+.accordion-button:not(.collapsed)
+{
+    color: var(--eceText);
+    background-color: var(--fond1);
+}
+.accordion-button:not(.collapsed)::after
+{
+    filter: brightness(0%) invert(70%);
+}
+
+.accordion-button:focus
+{
+    box-shadow: inherit;
+}
+
+.accordion-body
+{
+    color: var(--textBase);
+}
+
+#Deco
+{
+    max-width: 850px;
+}
+
+#Deco button:hover
+{
+    background-color: #dc3545!important;
+}
+
+.Actuel
+{
+    text-align: left!important;
+    background-color: var(--fond2);
+    color: var(--textBase);
+    margin-bottom: 5px;
+    left: 0;
+    position: relative;
+}

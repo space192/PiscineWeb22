@@ -10,6 +10,7 @@
         <link rel="icon" href="images/Decor/LogoOmnesSante2.ico">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://kit.fontawesome.com/c6c9e611bb.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <div id="Toutenhaut">

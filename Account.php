@@ -28,14 +28,16 @@
                             <div class="nav nav-tabs" id="nav-tab" role="tablist">
                                 <a class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true"><i class="fas fa-user-check"></i> Connection</a>
                                 <a class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false"><i class="fas fa-user-plus"></i> Inscription</a>
-                                <a class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" href="#nav-doctor" role="tab" aria-controls="nav-profile" aria-selected="false"><i class="fa-solid fa-user-doctor"></i> Medecin</a>
+                                <a class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" href="#nav-doctor" role="tab" aria-controls="nav-profile" aria-selected="false"><i class="fa-solid fa-user-doctor"></i> Médecin</a>
                             </div>
                         </nav>
                         <div class="tab-content" id="ex-with-icons-content">
-
-                            <?php include 'loginU.php' ?>
-                            <?php include 'createAccountU.php' ?>
-                            <?php include 'loginM.php' ?>
+                            <?php if(!$_SESSION["LOGGED"]) :?>
+                                <?php include 'loginU.php'?>
+                                <?php include 'createAccountU.php' ?>
+                                <?php include 'loginM.php' ?>
+                            <?php else : ?>
+                            <?php endif; ?>
                         </div>
                     <?php elseif (isset($_SESSION["LOGGED"]) || isset($_COOKIE["LOGGED_USER"])) : ?>
                         <?php include 'queryAccount.php'?>

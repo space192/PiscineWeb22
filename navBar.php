@@ -17,7 +17,7 @@
         <div id="BarreRecherche">
             <form id="search" method="post" action="querySearch.php">
                 <div id="Recherche">
-                    <label>🔎<input name="search" type="text" autocomplete="off" placeholder="Nom, spécialité, ..."></label>
+                    <label><i class="fas fa-search"></i><input type="text" autocomplete="off" placeholder="Nom, spécialité, ..."></label>
                     <button type="submit" id="SubmitRecherche">Rechercher</button>
                 </div>
             </form>
