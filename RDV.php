@@ -52,7 +52,10 @@
                 } catch (Exception $e) {
                     die('Erreur :' . $e->getMessage());
                 } 
-                $memberStatement = $mysqlConnection->prepare("SELECT * FROM EDT_Medecin;");
+
+                $data =  $_COOKIE["test1"];
+                $id = substr($data,12);
+                $memberStatement = $mysqlConnection->prepare("SELECT * FROM EDT_Medecin WHERE ID_Medecin = $id ;");
                 $memberStatement->execute();
                 $result = $memberStatement->fetchAll();
 
@@ -66,10 +69,10 @@
                 
 
 
-                $data =  $_COOKIE["test1"];
+                
                 echo('<tr>');
                 for ($i = 1; $i <= 8; $i++) {
-                    echo('<td ><div >' . date("l", mktime(0, 0, 0, date("m")  , date("d")+$i-1, date("Y"))) . '</div></td>');
+                    echo('<td style="width:12.5%;" >' . date("l", mktime(0, 0, 0, date("m")  , date("d")+$i-1, date("Y"))) . '</td>');
                 }
                 echo('</tr>');
                 $date = date_create(date('Y-m-d H:i:s'));

@@ -2,15 +2,14 @@
 include_once 'const.php';
 function getAccount()
 {
-    if(isset($_COOKIE["Mail"]))
+    if(isset($_COOKIE["LOGGED_USER"]))
     {
-        $temp = $_COOKIE["Mail"];
+        $temp = $_COOKIE["LOGGED_USER"];
     }
     else if(isset($_SESSION["LOGGED"]))
     {
         $temp = $_SESSION["LOGGED"];
     }
-    
     if(isset($temp))
     {
         global $mysqlConnection;
