@@ -40,6 +40,7 @@
                     </div>
                 </div>
             <?php elseif (isset($_SESSION["LOGGED"]) || isset($_COOKIE["LOGGED_USER"])) : ?>
+                <?php echo($_SESSION["LOGGED"]);?>
                 <?php include 'MyAccount.php' ?>
             <?php endif; ?>
         </section>
