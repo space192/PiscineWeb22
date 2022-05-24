@@ -1,42 +1,15 @@
-//#region dark theme
+//# Region collapse stuffs
+var coll = document.getElementsByClassName("collapsible");
+var i;
 
-let darktheme = 0;
-
-function toggleRootClass()
-{
-	document.querySelector(":root").classList.toggle("dark");
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
 }
-
-function switchTheme()
-{
-	var element = document.querySelector(":root");
-   element.classList.toggle("dark");
-}
-
-//#endregion
-
-//#region menu deroulant
-//https://www.w3schools.com/howto/howto_js_dropdown.asp
-function menuDeroulant()
-{
-	document.getElementById("Options").classList.toggle("show");
-}
-
-window.onclick = function(event)
-{
-	if (!event.target.matches('.boutounDeroulant'))
-	{
-		var deroulant = document.getElementsByClassName("contenu");
-		let i;
-		for (i = 0; i < deroulant.length; i++)
-		{
-			var ouverture = deroulant[i];
-			if (ouverture.classList.contains('show'))
-			{
-				ouverture.classList.remove('show');
-			}
-		}
-	}
-}
-
-//#endregion
