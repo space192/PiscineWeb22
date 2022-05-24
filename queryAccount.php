@@ -36,17 +36,21 @@ function loginM()
 
 function loginU()
 {
-    if(isset($_POST["Prenom"]) && isset($_POST["Nom"]) && isset($_POST["Mail"]))
+
+    if(isset($_POST["Mail"]) && isset($_POST["pwd"]) )
     {
         global $mysqlConnection;
-        $memberStatement = $mysqlConnection->prepare("SELECT * FROM Medecin WHERE Prenom='". $_POST["Prenom"] ."' AND Nom='". $_POST["Nom"] ."';");
-        if($memberStatement->execute())
+        $memberStatement = $mysqlConnection->prepare("SELECT ID,Mail FROM utilisateur WHERE Mail='". $_POST["Mail"] ."' AND pwd='". hash('sha256', $_POST['pwd']) ."';");
+        $memberStatement->execute();
+        $result = $memberStatement->fetch();
+        if($result != False)
         {
-            $result = $memberStatement->fetchAll();
+            echo("oui");
             return $result;
         }
         else
         {
+            echo("non");
             return false;
         }
     }
@@ -82,13 +86,13 @@ function InsertUIntoBDD()
         {
             $sql = "INSERT INTO utilisateur (Nom, Prenom, Telephone,Mail,Adresse_ligne1,Adresse_ligne2,Ville,Code_postal,Pays,Carte_vital, pwd) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
             $stmt= $mysqlConnection->prepare($sql);
-            return $stmt->execute([$_POST["Nom"], $_POST["Prenom"], $_POST["Telephone"],$_POST["Mail"],$_POST["Adresse_Ligne1"],$_POST["Adresse_Ligne2"],$_POST["Ville"],$_POST["Code_postal"],$_POST["Pays"],$_POST["Carte_vital"],$_POST["pwd"]]);
+            return $stmt->execute([$_POST["Nom"], $_POST["Prenom"], $_POST["Telephone"],$_POST["Mail"],$_POST["Adresse_ligne1"],$_POST["Adresse_Ligne2"],$_POST["Ville"],$_POST["Code_postal"],$_POST["Pays"],$_POST["Carte_vital"],hash('sha256', $_POST['pwd'])]);
         }
         else
         {
             $sql = "INSERT INTO utilisateur (Nom, Prenom, Telephone,Mail,Adresse_ligne1,Ville,Code_postal,Pays,Carte_vital, pwd) VALUES (?,?,?,?,?,?,?,?,?,?)";
             $stmt= $mysqlConnection->prepare($sql);
-            return $stmt->execute([$_POST["Nom"], $_POST["Prenom"], $_POST["Telephone"],$_POST["Mail"],$_POST["Adresse_Ligne1"],$_POST["Ville"],$_POST["Code_postal"],$_POST["Pays"],$_POST["Carte_vital"],$_POST["pwd"]]);
+            return $stmt->execute([$_POST["Nom"], $_POST["Prenom"], $_POST["Telephone"],$_POST["Mail"],$_POST["Adresse_ligne1"],$_POST["Ville"],$_POST["Code_postal"],$_POST["Pays"],$_POST["Carte_vital"],hash('sha256', $_POST['pwd'])]);
         }
     }
 }
@@ -118,6 +122,8 @@ if(isset($_POST["query"]))
         case 3: loginM(); break; //login pour les medecins
         case 4: loginU(); break; //login pour les useurs
     }
+    //header('Location: Account.php');
+    //die();
 }
 else
 {
