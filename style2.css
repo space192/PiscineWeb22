@@ -10,7 +10,7 @@
   height : 100%;
   width: 80%;
   transition: height 0.4s;
-  border : 20px #013d42;
+  border : 20px var(--eceText);
   margin: auto;
   box-shadow: 0 8px 16px -8px rgba(0,0,0,0.4);
   background-color: var(--fond1);
@@ -23,7 +23,7 @@
   width:100%;
   margin: auto;
   background-color: var(--fond1);
-  color: #013d42;
+  color: var(--eceText);
   border-radius: 10px;
   text-align:center;
   font-weight: bold;

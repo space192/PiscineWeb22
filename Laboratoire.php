@@ -45,16 +45,22 @@
                                         <div class="modal fade" id="covidM" tabindex="-1" aria-labelledby="covid" aria-hidden="true">
                                             <div class="modal-dialog modal-lg">
                                                 <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title">Dépistage COVID-19</h5>
-                                                </div>
-                                                <div class="modal-body">
-                                                    ...
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                    <button type="button" class="btn btn-primary">Save changes</button>
-                                                </div>
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" style="font-size:170%; font-weight:800; color: #013d42;">Dépistage COVID-19</h5>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div id="infoservice">
+                                                            <h5>Informations générales</h5>
+                                                            ...
+                                                        </div>
+                                                        <div id="regleservice">
+                                                            <h5>Règles</h5>
+                                                            ...
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -67,16 +73,22 @@
                                         <div class="modal fade" id="preventiveM" tabindex="-1" aria-labelledby="preventive" aria-hidden="true">
                                             <div class="modal-dialog modal-lg">
                                                 <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title">Biologie préventive</h5>
-                                                </div>
-                                                <div class="modal-body">
-                                                    ...
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                    <button type="button" class="btn btn-primary">Save changes</button>
-                                                </div>
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" style="font-size:170%; font-weight:800; color: #013d42;">Biologie préventive</h5>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div id="infoservice">
+                                                            <h5>Informations générales</h5>
+                                                            ...
+                                                        </div>
+                                                        <div id="regleservice">
+                                                            <h5>Règles</h5>
+                                                            ...
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -89,16 +101,22 @@
                                         <div class="modal fade" id="femmeM" tabindex="-1" aria-labelledby="femme" aria-hidden="true">
                                             <div class="modal-dialog modal-lg">
                                                 <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="femme">Biologie de la femme enceinte</h5>
-                                                </div>
-                                                <div class="modal-body">
-                                                    ...
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                    <button type="button" class="btn btn-primary">Save changes</button>
-                                                </div>
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" style="font-size:170%; font-weight:800; color: #013d42;">Biologie de la femme enceinte</h5>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div id="infoservice">
+                                                            <h5>Informations générales</h5>
+                                                            ...
+                                                        </div>
+                                                        <div id="regleservice">
+                                                            <h5>Règles</h5>
+                                                            ...
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -111,16 +129,22 @@
                                         <div class="modal fade" id="routineM" tabindex="-1" aria-labelledby="routine" aria-hidden="true">
                                             <div class="modal-dialog modal-lg">
                                                 <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="routine">Biologie de routine</h5>
-                                                </div>
-                                                <div class="modal-body">
-                                                    ...
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                    <button type="button" class="btn btn-primary">Save changes</button>
-                                                </div>
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" style="font-size:170%; font-weight:800; color: #013d42;">Biologie de routine</h5>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div id="infoservice">
+                                                            <h5>Informations générales</h5>
+                                                            ...
+                                                        </div>
+                                                        <div id="regleservice">
+                                                            <h5>Règles</h5>
+                                                            ...
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -133,16 +157,22 @@
                                         <div class="modal fade" id="cancerM" tabindex="-1" aria-labelledby="cancer" aria-hidden="true">
                                             <div class="modal-dialog modal-lg">
                                                 <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="cancer">Cancérologie</h5>
-                                                </div>
-                                                <div class="modal-body">
-                                                    ...
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                    <button type="button" class="btn btn-primary">Save changes</button>
-                                                </div>
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" style="font-size:170%; font-weight:800; color: #013d42;">Cancérologie</h5>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div id="infoservice">
+                                                            <h5>Informations générales</h5>
+                                                            ...
+                                                        </div>
+                                                        <div id="regleservice">
+                                                            <h5>Règles</h5>
+                                                            ...
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -155,16 +185,22 @@
                                         <div class="modal fade" id="gynecoM" tabindex="-1" aria-labelledby="gyneco" aria-hidden="true">
                                             <div class="modal-dialog modal-lg">
                                                 <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="gyneco">Gynécologie</h5>
-                                                </div>
-                                                <div class="modal-body">
-                                                    ...
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                    <button type="button" class="btn btn-primary">Save changes</button>
-                                                </div>
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" style="font-size:170%; font-weight:800; color: #013d42;">Gynécologie</h5>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div id="infoservice">
+                                                            <h5>Informations générales</h5>
+                                                            ...
+                                                        </div>
+                                                        <div id="regleservice">
+                                                            <h5>Règles</h5>
+                                                            ...
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
