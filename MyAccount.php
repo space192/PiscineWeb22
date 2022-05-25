@@ -2,7 +2,8 @@
 <?php $result = getAccount() ?>
 <link rel="stylesheet" href="MyAccount.css">
 <div class="Boites">
-    <div class="SousBoites" style="max-width: 850px;">
+    <h2>Modifier votre profil</h2>
+    <div class="SousBoites">
         <?php
         if(isset($_GET["error"]))
         {
@@ -235,3 +236,4 @@
         </form>
     </div>
 </div>
+<?php include 'Admin.php' ?>

@@ -19,11 +19,15 @@
     <script type="text/javascript">
         function effacer() {
 
-            let date = event.target.getAttribute('data-arg1');
-            document.cookie = "DateEff=" + date+ "; SameSite=None; Secure";
-            let client = event.target.getAttribute('data-arg2');
-            document.cookie = "ClientEff=" + client + "; SameSite=None; Secure";
-            location.href = "EffacerRDV.php";
+            if(confirm("Voullez vous annulez ce rendez-vous?"))
+            {
+                let date = event.target.getAttribute('data-arg1');
+                document.cookie = "DateEff=" + date+ "; SameSite=None; Secure";
+                let client = event.target.getAttribute('data-arg2');
+                document.cookie = "ClientEff=" + client + "; SameSite=None; Secure";
+                location.href = "EffacerRDV.php";
+            }
+            
         }
 
         
