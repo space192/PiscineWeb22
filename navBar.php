@@ -1,4 +1,5 @@
 <script src="https://kit.fontawesome.com/c6c9e611bb.js" crossorigin="anonymous"></script>
+<?php include_once 'const.php' ?>
 <header style="z-index :10;">
     <div id="BarrePrincipale">
         <a href="index.php"><img src="images/Decor/LogoOmnesSante2.png" alt="Omnes Santé" width="50px" height="50px"></a>
@@ -12,8 +13,13 @@
                     <a href="laboratoire.php">Laboratoire</a>
                 </div>
             </div>
-            <button onclick="location.href='AffichageRDV.php'">Rendez-vous</button>
-            <button onclick="location.href='Account.php'">Votre Compte</button>
+            
+            <?php if (isset($_SESSION["LOGGED"]) || isset($_COOKIE["LOGGED_USER"])) : ?>
+                <button onclick="location.href='AffichageRDV.php'">Rendez-vous</button>
+                <button onclick="location.href='Account.php'">Mon Compte</button>
+            <?php else :?>
+                <button onclick="location.href='Account.php'">Se Connecter</button>
+            <?php endif;?>
         </div>
         <div id="BarreRecherche">
             <form id="search" method="post" action="querySearch.php">
