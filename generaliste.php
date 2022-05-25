@@ -38,7 +38,7 @@ foreach ($result as $elem) {
     echo ($plages[0] . $id);
     echo (')">Prendre un rendez vous </button>
             <button id="button"  onclick="showChat()">Communiquez avec le médecin</button>
-            <button id="button"  onclick="showContact()">Voir son CV</button>
+            <button id="button"' . 'onclick="location.href=' . "'CV.php?ID=" . $id . "'" . '"' . '>Voir son CV</button>
             </div> </div><div id="general">
             <div id="information-contact">');
 

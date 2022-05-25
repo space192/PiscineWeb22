@@ -22,7 +22,8 @@
     
     $sql = "INSERT INTO EDT_Medecin (ID_Medecin, ID_Client,Date, Paiement,Autre_info_client) VALUES (?,?,?,?,?)";
     $stmt= $mysqlConnection->prepare($sql);
-     return $stmt->execute([$value1,$value2, $value3, $value4,$value5]);
-    
+    $stmt->execute([$value1,$value2, $value3, $value4,$value5]);
+    header('Location: index.php');
+    die();
 
 ?>
