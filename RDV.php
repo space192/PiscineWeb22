@@ -19,11 +19,13 @@
     <script>    
         function reserver() {
                 
+            
                 location.href = "reserver.php";
                 let date = event.target.getAttribute('data-arg1');
                 let heure = event.target.getAttribute('data-arg2');
                 document.cookie = "Heure=" + heure + "; SameSite=None; Secure";
-                document.cookie = "Date=" + date + "; SameSite=None; Secure";           
+                document.cookie = "Date=" + date + "; SameSite=None; Secure";    
+                       
         }
     </script>
 </head>
@@ -52,25 +54,20 @@
                 } catch (Exception $e) {
                     die('Erreur :' . $e->getMessage());
                 } 
+                $datatest =  $_COOKIE["test1"];
+                $id = substr($datatest,13);
+                $data = substr($datatest,1,12);
                 
-                $data =  $_COOKIE["test1"];
-                $data = substr($data,1);
-                $id = substr($data,12);
+                
+                
                 $memberStatement = $mysqlConnection->prepare("SELECT * FROM EDT_Medecin WHERE ID_Medecin = $id ;");
                 $memberStatement->execute();
                 $result = $memberStatement->fetchAll();
-
                 $listeRDV = []; ;
                 foreach ($result as $elem) 
                 {
                     array_push($listeRDV,$elem["Date"]);
                 }
-                
-                
-                
-
-
-                
                 echo('<tr>');
                 for ($i = 1; $i <= 8; $i++) {
                     echo('<td style="width:12.5%;" >' . date("l", mktime(0, 0, 0, date("m")  , date("d")+$i-1, date("Y"))) . '</td>');
@@ -80,10 +77,6 @@
                 date_time_set($date, 9, 00);
                 $dateR = date_create(date('Y-m-d H:i:s'));
                 date_time_set($dateR, 13, 30);
-                
-                
-                
-            
                 for ($j = 1; $j <= 17; $j++) {
                     date_time_set($date, 9, 00 + $j*30);
                     echo('<tr>');

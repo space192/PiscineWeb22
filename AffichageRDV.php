@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="AffichageRDV.css">
     <link rel="stylesheet" href="Index.css">
     <link rel="stylesheet" href="Account.css">
+    <?php include_once 'const.php' ?>
     <script src="Index.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <link rel="icon" href="images/Decor/LogoOmnesSante2.ico">
@@ -50,13 +51,58 @@
             $memberStatement = $mysqlConnection->prepare("SELECT * FROM EDT_Medecin ;");
             $memberStatement->execute();
             $result = $memberStatement->fetchAll();
+            
+            $idU = -1;
 
+            if (isset($_SESSION["LOGGED"]) || isset($_COOKIE["LOGGED_USER"])) 
+            {
+                include 'queryAccount.php' ;
+                $resultU = getAccount() ;
+                $idU = $resultU["ID"];
+            }
+
+            echo $idU;
+
+            echo ('<div id="deroulant">');
             foreach($result as $RDV)
-            echo ('<div id="cardRDV">');
-                // $RDV["date"]
+            {
+                if($RDV["ID_Client"] == $idU )
+                {
+                    $id = $RDV["ID_Medecin"];
+                    $memberStatement = $mysqlConnection->prepare("SELECT * FROM Medecin WHERE id= $id ;");
+                    $memberStatement->execute();
+                    $data = $memberStatement->fetchAll();
+                    echo ('<div id="cardRDV">');
+                    echo ('<div id="detailsRDV">');
+
+                    echo ('<div id="textDetails">');
+                    echo('<div id="titreD">');
+                    echo('Medecin :');
+                    echo ('</div>');
+                    echo('<div id="descriptionD">');
+                    echo($data[0]["Nom"] . $data[0]["Prenom"]);
+                    echo ('</div>');
+                    echo ('</div>');
+
+                    echo ('<div id="textDetails">');
+                    echo('<div id="titreD">');
+                    echo('Date :');
+                    echo ('</div>');
+                    echo('<div id="descriptionD">');
+                    echo($RDV["Date"]);
+                    echo ('</div>');
+                    echo ('</div>');
 
 
-            echo ('</div>');
+                    echo ('</div>');
+                    echo ('<button id="annuler">');
+                    echo ('</button>');
+                    echo ('</div>');    
+                }
+                
+            }
+            echo ('</deroulant>');
+            
 
 
         

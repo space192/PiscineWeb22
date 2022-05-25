@@ -9,4 +9,64 @@
     /* position: relative; */
     margin: 50px;
     border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+
+
   }
+
+#detailsRDV
+{
+    width:100%;
+    height:100%;
+    transition: width 0.4s;
+    background: linear-gradient(#013d42, #266b6b);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+
+#textDetails
+{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+#titreD
+{
+    color: white;
+    font-weight: bold;
+}
+#descriptionD
+{
+    color: white;
+}
+
+
+#annuler
+{
+    width:0%;
+    height:100%;
+    transition: width 0.4s;
+    background: linear-gradient(rgb(75, 3, 3), red);
+}
+
+#annuler:hover
+{
+    
+    background: linear-gradient(rgb(127, 5, 5), rgb(102, 61, 61));
+}
+
+
+#cardRDV:hover #detailsRDV {
+    width:80%;
+}
+
+#cardRDV:hover #annuler {
+    width:20%;
+}
