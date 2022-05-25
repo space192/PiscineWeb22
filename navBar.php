@@ -12,7 +12,7 @@
                     <a href="laboratoire.php">Laboratoire</a>
                 </div>
             </div>
-            <button onclick="location.href='index.php'">Rendez-vous</button>
+            <button onclick="location.href='AffichageRDV.php'">Rendez-vous</button>
             <button onclick="location.href='Account.php'">Votre Compte</button>
         </div>
         <div id="BarreRecherche">

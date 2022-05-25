@@ -8,8 +8,13 @@
     } catch (Exception $e) {
         die('Erreur :' . $e->getMessage());
     }
-    $value1 = substr($_COOKIE["test1"],12);
-    $value2 = 2;
+    include_once 'const.php';
+    include 'queryAccount.php' ;
+    $resultU = getAccount() ;
+    $idU = $resultU["ID"];
+
+    $value1 = substr($_COOKIE["test1"],13);
+    $value2 = $idU;
     $value3=date($_COOKIE["Date"] . ' ' . $_COOKIE["Heure"]);
     $value4 = 1;
     $value5 = "Pas d'infos";

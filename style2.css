@@ -15,8 +15,8 @@
   border : 20px #013d42;
   margin: auto;
   box-shadow: 0 8px 16px -8px rgba(0,0,0,0.4);
-  margin-top: 30px;
-  margin-bottom: 30px;
+  
+  background-color: var(--fond1);
   
   
 }
@@ -67,10 +67,14 @@
   justify-content: center;
   height : 100%;
   transition: height 0.4s;
+  background-color: var(--fond1);
   
   
 }
 
+#contenant{
+  background-color: var(--fond1);
+}
 
 #contextuel{
   background-color: #404040;
@@ -83,7 +87,7 @@
   width: 70%;
   height: 100%;
   transition: width 0.4s;
-  background-color: white;
+  background-color: var(--fond1);
   float : right;
   
   /* position: absolute; */
@@ -118,8 +122,8 @@
 #card {
   width: 500px;
   height: 250px;
-  background-color: #fff;
-  background: linear-gradient(#f8f8f8, #fff);
+  background-color: var(--fond1);
+  background: linear-gradient(var(--fond1), var(--fond2));
   box-shadow: 0 8px 16px -8px rgba(0,0,0,0.4);
   border-radius: 6px;
   overflow: hidden; 

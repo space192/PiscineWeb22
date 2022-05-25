@@ -19,7 +19,7 @@
         function showContact(plage) {
 
             location.href = "RDV.php";
-            document.cookie = "test1=" + plage + "; SameSite=None; Secure";
+            document.cookie = "test1=" +"$" + plage + "";
 
         }
 

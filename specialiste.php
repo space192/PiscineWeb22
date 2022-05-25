@@ -18,7 +18,14 @@ $memberStatement = $mysqlConnection->prepare("SELECT * FROM Specialite ;");
 $memberStatement->execute();
 $spe = $memberStatement->fetchAll();
 
+
+
+
+
+
 echo('<div id="contenantSpe">');
+
+
 foreach($spe as $specialite)
 {
     
