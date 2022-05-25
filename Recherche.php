@@ -15,6 +15,7 @@
     <script src="https://kit.fontawesome.com/c6c9e611bb.js" crossorigin="anonymous"></script>
     <?php include_once 'const.php' ?>
     <script src="Index.js"></script>
+    <script src="Medecins.js"></script>
 </head>
 
 <body>

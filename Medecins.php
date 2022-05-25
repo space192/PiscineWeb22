@@ -15,18 +15,7 @@
     <link rel="icon" href="images/Decor/LogoOmnesSante2.ico">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript">
-        function showContact(plage) {
-            
-            location.href = "RDV.php";
-            document.cookie = "test1=" +"$" + plage + "";
-
-        }
-
-        function showChat() {
-            location.href = "chat.php";
-        }
-    </script>
+    <script src="Medecins.js"></script>
 </head>
 
 <body>
