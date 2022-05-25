@@ -24,13 +24,13 @@ function card($elem)
             </div> </div><div id="general">
             <div id="information-contact">');
 
-    echo ('Localisation :');
+    echo ('Localisation : ');
     echo ($elem["Localisation"]);
     echo ('<br>');
-    echo ('Téléphone :');
+    echo ('Téléphone : ');
     echo ($elem["Telephone"]);
     echo ('<br>');
-    echo ('Mail :');
+    echo ('Mail : ');
     echo ($elem["Mail"]);
     echo ('<br>');
 
