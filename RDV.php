@@ -23,7 +23,8 @@
                 let date = event.target.getAttribute('data-arg1');
                 let heure = event.target.getAttribute('data-arg2');
                 document.cookie = "Heure=" + heure + "; SameSite=None; Secure";
-                document.cookie = "Date=" + date + "; SameSite=None; Secure";    
+                document.cookie = "Date=" + date + "; SameSite=None; Secure";
+                alert("Rendez-vous le " + date + " à " + heure + " confirmé!");    
                        
         }
     </script>
