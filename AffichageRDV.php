@@ -39,15 +39,6 @@
             <div id="Darkmode"><button onclick="switchTheme()" title="Changer de thème de couleur">◐</button></div>
         </header>
         <?php 
-            try {
-                $mysqlConnection = new PDO(
-                    'mysql:host=fournierfamily.ovh;port=15621;dbname=OmnesSante;charset=utf8',
-                    'jps',
-                    'poojava'
-                );
-            } catch (Exception $e) {
-                die('Erreur :' . $e->getMessage());
-            }
             $memberStatement = $mysqlConnection->prepare("SELECT * FROM EDT_Medecin ;");
             $memberStatement->execute();
             $result = $memberStatement->fetchAll();

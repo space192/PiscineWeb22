@@ -1,13 +1,4 @@
 <?php
-    try {
-        $mysqlConnection = new PDO(
-            'mysql:host=fournierfamily.ovh;port=15621;dbname=OmnesSante;charset=utf8',
-            'jps',
-            'poojava'
-        );
-    } catch (Exception $e) {
-        die('Erreur :' . $e->getMessage());
-    }
     include_once 'const.php';
     include 'queryAccount.php' ;
     $resultU = getAccount() ;
