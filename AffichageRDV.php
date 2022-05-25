@@ -61,8 +61,8 @@
                 $idU = $resultU["ID"];
             }
 
-            echo $idU;
 
+            echo ('<div id="contenant">');
             echo ('<div id="deroulant">');
             foreach($result as $RDV)
             {
@@ -110,6 +110,7 @@
                 
             }
             echo ('</deroulant>');
+            echo('</div>')
             
 
 
