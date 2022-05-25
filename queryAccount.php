@@ -82,17 +82,72 @@ function loginU()
 
 function fieldChange()
 {
-    $temp = "UPDATE ". $_POST["type"]." SET ";
+    global $mysqlConnection;
+    $temp = "UPDATE utilisateur SET ";
     foreach($_POST as $key => $value)
     {
         if($key != "query")
         {
-            $temp += " " .$key . "='" . $value . "',";
+            if($key == "pwd")
+            {
+                $temp = $temp . " " .$key . "='" . hash("sha256", $value) . "',";
+            }
+            else if($key == "Mail")
+            {
+                $memberStatement = $mysqlConnection->prepare("SELECT Mail FROM utilisateur WHERE LOWER(Mail)='". strtolower($_POST["Mail"]) . "';");
+                $memberStatement->execute();
+                $result = $memberStatement->fetch();
+                if($result != False)
+                {
+                    return false;
+                }
+                else
+                {
+                    $temp = $temp . " " .$key . "='" . $value . "',";
+                    if(isset($_COOKIE["LOGGED_USER"]))
+                    {
+                        $temp2 = $_COOKIE["LOGGED_USER"];
+                        setcookie(
+                            'LOGGED_USER',
+                            $value,
+                            [
+                                'expires' => time() + 365*24*3600,
+                                'secure' => true,
+                                'httponly' => true,
+                            ]
+                        );
+                    }
+                    else if(isset($_SESSION["LOGGED"]))
+                    {
+                        $temp2 = $_SESSION["LOGGED"];
+                        include_once 'const.php';
+                        $_SESSION["LOGGED"] = $value;
+                    }
+                }   
+            }
+            else
+            {
+                $temp = $temp . " " .$key . "='" . $value . "',";
+            }
         }
     }
     $temp = substr_replace($temp ,"",-1);
-    $temp += " WHERE ID='" . $_POST["ID"] ."'";
-    global $mysqlConnection;
+    if(isset($temp2))
+    {
+        $temp = $temp . " WHERE Mail='" . $temp2 ."'";
+    }
+    else
+    {
+        if(isset($_SESSION["LOGGED"]))
+        {
+            $temp = $temp . " WHERE Mail='" . $_SESSION["LOGGED"] ."'";
+        }
+        else if(isset($_COOKIE["LOGGED_USER"]))
+        {
+            $temp = $temp . " WHERE Mail='" . $_COOKIE["LOGGED_USER"] ."'";
+        }
+    }
+    
     $memberStatement = $mysqlConnection->prepare($temp);
     return $memberStatement->execute();
 }
@@ -144,6 +199,7 @@ if(isset($_POST["query"]))
         case 2: InsertMIntoBDD(); break; //inserMedecin dans la BDD
         case 3: loginM(); break; //login pour les medecins
         case 4: loginU(); break; //login pour les useurs
+        case 5: if(!fieldChange()){header('Location: Account.php?error=1');die();}; break;
     }
     header('Location: Account.php');
     die();

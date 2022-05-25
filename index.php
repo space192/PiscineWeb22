@@ -14,7 +14,7 @@
     </head>
     <body>
         <div id="Toutenhaut">
-            <div id="Darkmode"><button onclick="switchTheme()" title="Changer de thème de couleur">◐</button></div>
+            <div id="Darkmode"><button onclick="switchTheme();" title="Changer de thème de couleur">◐</button></div>
         <?php include 'Caroussel.php'?>
         </div>
         <div id="Wrapper">

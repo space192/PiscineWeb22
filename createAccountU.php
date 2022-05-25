@@ -4,13 +4,13 @@
         <div class="row">
             <div class="col-12 col-md-6 mb-4">
                 <div class="form mb-3">
-                    <input type="text" name="Prenom" class="form-control" id="floatingInputPrenom" placeholder="Prénom">
+                    <input type="text" name="Prenom" class="form-control" id="floatingInputPrenom" placeholder="Prénom" required>
                     <label for="floatingInputPrenom">Prénom</label>
                 </div>
             </div>
             <div class="col-12 col-md-6 mb-4">
                 <div class="form mb-3">
-                    <input type="text" name="Nom" class="form-control" id="floatingInputNom" placeholder="Nom">
+                    <input type="text" name="Nom" class="form-control" id="floatingInputNom" placeholder="Nom" required>
                     <label for="floatingInputNom">Nom</label>
                 </div>
             </div>
@@ -18,13 +18,13 @@
         <div class="row">
             <div class="col-12 col-md-6 mb-4">
                 <div class="form mb-3">
-                    <input type="number" name="Telephone" class="form-control" id="floatingInputTel" placeholder="Téléphone">
+                    <input maxlength="10" minlength="10" name="Telephone" class="form-control" id="floatingInputTel" placeholder="Téléphone" pattern='^[0-9]*$' required>
                     <label for="floatingInputTel">Téléphone</label>
                 </div>
             </div>
             <div class="col-12 col-md-6 mb-4">
                 <div class="form mb-3">
-                    <input type="text" name="Pays" class="form-control" id="floatingInputPays" placeholder="Pays">
+                    <input type="text" name="Pays" class="form-control" id="floatingInputPays" placeholder="Pays" required>
                     <label for="floatingInputPays">Pays</label>
                 </div>
             </div>
@@ -32,7 +32,7 @@
         <div class="row">
             <div class="col-12 col-md-6 mb-4">
                 <div class="form mb-3">
-                    <input type="text" name="Adresse_ligne1" class="form-control" id="floatingInputADL1" placeholder="Addresse ligne 1">
+                    <input type="text" name="Adresse_ligne1" class="form-control" id="floatingInputADL1" placeholder="Addresse ligne 1" required>
                     <label for="floatingInputADL1">Addresse ligne 1</label>
                 </div>
             </div>
@@ -46,32 +46,32 @@
         <div class="row">
             <div class="col-12 col-md-6 mb-4">
                 <div class="form mb-3">
-                    <input type="text" name="Ville" class="form-control" id="floatingInputVille" placeholder="Ville">
+                    <input type="text" name="Ville" class="form-control" id="floatingInputVille" placeholder="Ville" required>
                     <label for="floatingInputVille">Ville</label>
                 </div>
             </div>
             <div class="col-12 col-md-6 mb-4">
                 <div class="form mb-3">
-                    <input type="text" name="Code_postal" class="form-control" id="floatingInputCP" placeholder="Code postal">
+                    <input type="text" name="Code_postal" class="form-control" id="floatingInputCP" placeholder="Code postal" pattern="^[0-9]*$" maxlength="5" minlength="5" required>
                     <label for="floatingInputCP">Code postal</label>
                 </div>
             </div>
         </div>
 
         <div class="form mb-3">
-            <input type="number" name="Carte_vital" class="form-control" id="floatingInputSecu" placeholder="Carte Vitale">
+            <input minlength="15" maxlength="15" pattern="^[0-9]*$" name="Carte_vital" class="form-control" id="floatingInputSecu" placeholder="Carte Vitale" required>
             <label for="floatingInputSecu">Numéro de sécurité sociale</label>
         </div>
 
         <!-- Email input -->
         <div class="form mb-3">
-            <input type="email" name="Mail" class="form-control" id="floatingInputMail" placeholder="name@example.com">
+            <input type="email" name="Mail" class="form-control" id="floatingInputMail" placeholder="name@example.com" required>
             <label for="floatingInputMail">Email address</label>
         </div>
 
         <!-- Password input -->
         <div class="form">
-            <input type="password" name="pwd" class="form-control" id="floatingPassword" placeholder="Password">
+            <input type="password" name="pwd" class="form-control" id="floatingPassword" placeholder="Password" required>
             <label for="floatingPassword">Password</label>
         </div>
         <br>
