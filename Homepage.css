@@ -10,6 +10,31 @@ html, body {height:80%;margin:0;}
     text-align: center;
 }
 
+#GrosLogo
+{
+    position: absolute;
+    left: 15px;
+    background-color: var(--ece);
+    color: white;
+    padding: 15px;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+    color: var(--textBase);
+    text-align: left;
+    text-decoration: none;
+    font-size: xx-large;
+}
+
+#GrosLogo a
+{
+    text-decoration: none;
+    color: white;
+    font-family: 'Arima Madurai';
+}
+
 #Toutenhaut a
 {
     text-decoration: none;
