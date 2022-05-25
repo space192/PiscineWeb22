@@ -26,6 +26,19 @@
     justify-content: space-evenly;
 
 }
+#detailsProfil
+{
+    width:30%;
+    height:100%;
+    transition: width 0.4s;
+    background: linear-gradient(#013d42, #266b6b);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border:10px #f8f8f8 ;
+    
+}
+
 
 #textDetails
 {
@@ -70,3 +83,14 @@
 #cardRDV:hover #annuler {
     width:20%;
 }
+
+
+#photoProfil{
+    border-radius: 5px;
+    max-width: 80%;
+    max-height: 70%;
+    margin : auto;
+    margin-top: 5%;
+    overflow: hidden;
+  }
+  
