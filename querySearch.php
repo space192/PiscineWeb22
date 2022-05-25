@@ -14,14 +14,17 @@ if(isset($_POST["search"]))
     }
     $memberStatement = $mysqlConnection->prepare($sql);
     $memberStatement->execute();
-    $result = $memberStatement->fetchAll();
-    foreach($result as $res)
-    {
-        echo($res["pp"] . " " .$res["Prenom"] . " " . $res["Nom"]);
-    }
+    $resultM = $memberStatement->fetchAll();
+    $sql = "SELECT Nom,Info FROM Service WHERE LOWER(Nom) LIKE '%" . $temp[0] . "%';";
+    $memberStatement = $mysqlConnection->prepare($sql);
+    $memberStatement->execute();
+    $resultS = $memberStatement->fetchAll();
 }
 else
 {
     die;
 }
+
+
+///tu peux faire le front ici pour l'affichage des recherches on aura les variables du dessus pour afficher les résultats
 ?>
