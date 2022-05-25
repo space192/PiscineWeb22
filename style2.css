@@ -3,8 +3,6 @@
 
 
 #deroulant {
-  
-  
   display: flex;
   flex-direction: row;
   flex-wrap : wrap;
@@ -15,10 +13,7 @@
   border : 20px #013d42;
   margin: auto;
   box-shadow: 0 8px 16px -8px rgba(0,0,0,0.4);
-  
   background-color: var(--fond1);
-  
-  
 }
 
 #titreSpe{
@@ -27,7 +22,7 @@
   margin-bottom: 30px;
   width:100%;
   margin: auto;
-  background-color: white;
+  background-color: var(--fond1);
   color: #013d42;
   border-radius: 10px;
   text-align:center;
@@ -37,8 +32,6 @@
 }
 
 #deroulantSpe {
-  
-  
   display: flex;
   flex-direction: row;
   flex-wrap : wrap;
@@ -55,12 +48,9 @@
   background-color: #266b6b;
   border-radius: 20px;
   box-shadow: 0 8px 16px -8px rgba(0,0,0,0.4);
-  
 }
 
 #contenantSpe {
-  
-  
   display: flex;
   flex-direction: column;
   flex-wrap : wrap;
@@ -68,8 +58,6 @@
   height : 100%;
   transition: height 0.4s;
   background-color: var(--fond1);
-  
-  
 }
 
 #contenant{
@@ -87,7 +75,7 @@
   width: 70%;
   height: 100%;
   transition: width 0.4s;
-  background-color: var(--fond1);
+  background-color: var(--fond2);
   float : right;
   
   /* position: absolute; */
@@ -105,7 +93,6 @@
   transition: width 0.4s;
   float:left;
   overflow: hidden;
-  
   z-index: 2;
   transition: width 0.4s;
 }
@@ -171,7 +158,7 @@
 }
 
 #button{
-  background-color: white; 
+  background-color: var(--fond1);
   border: none;
   color: var(--ece);
   text-align: center;
@@ -227,7 +214,7 @@
 
 #cellButton
 {
-  background-color: white; 
+  background-color: white;
   border: none;
   color: var(--ece);
   text-align: center;
@@ -239,7 +226,7 @@
 
 #cellButtonN
 {
-  background-color: rgb(240, 146, 146); 
+  background-color: rgb(240, 146, 146);
   border: none;
   color: var(--ece);
   text-align: center;
@@ -269,10 +256,6 @@
 
 #image
 {
-  
   max-height: 100%;
   overflow: hidden;
 }
-
-
-

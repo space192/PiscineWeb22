@@ -27,7 +27,6 @@ function switchTheme() {
 	{
 		localStorage.setItem("theme","");
 	}
-	
 }
 
 //#endregion

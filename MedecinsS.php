@@ -9,7 +9,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style2.css">
     <link rel="stylesheet" href="Index.css">
-    <link rel="stylesheet" href="Account.css">
     <script src="Index.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <link rel="icon" href="images/Decor/LogoOmnesSante2.ico">
@@ -34,6 +33,7 @@
 
         <header id="Header">
             <?php include 'navBar.php' ?>
+            <?php include 'NavBarStatique.php' ?>
             <div id="Darkmode"><button onclick="switchTheme()" title="Changer de thème de couleur">◐</button></div>
         </header>
         <?php include 'specialiste.php' ?>

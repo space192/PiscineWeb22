@@ -1,29 +1,3 @@
-:root
-{
-    --textBase : #222;
-    --textSousText: #262626;
-    --fond1: white;
-    --fond2: whitesmoke;
-    --ece: #266b6b;
-    --ece2: #013d42;
-    --eceText: #013d42;
-    --pointActif: #717171;
-    --pointInactif: #bbbbbb;
-}
-
-:root.dark
-{
-    --textBase : white;
-    --textSousText: whitesmoke;
-    --fond1: #252526;
-    --fond2: #333333;
-    --ece: #266b6b;
-    --ece2: #013d42;
-    --eceText: #339191;
-    --pointActif: whitesmoke;
-    --pointInactif: grey;
-}
-
 #Darkmode
 {
     position: absolute;
@@ -54,29 +28,6 @@
     color: var(--fond1);;
 }
 
-#BarrePrincipale
-{
-    overflow :visible;
-}
-
-#Milieu
-{
-    background-color: var(--fond1);
-    padding: 40px 16px 30px 16px;
-}
-
-.Sticky
-{
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index : 10;
-}
-
-.Sticky + #Milieu
-{
-    padding-top: 100px;
-}
 #boite
 {
     display: flex;
@@ -128,12 +79,12 @@
     outline: none;
     font-size: 15px;
   }
-  
+
   /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
   .active, .collapsible:hover {
     background-color: #ccc;
   }
-  
+
   /* Style the collapsible content. Note: hidden by default */
   .content {
     padding: 0 18px;

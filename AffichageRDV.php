@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="style2.css">
     <link rel="stylesheet" href="AffichageRDV.css">
     <link rel="stylesheet" href="Index.css">
-    <link rel="stylesheet" href="Account.css">
     <?php include_once 'const.php' ?>
     <script src="Index.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
@@ -36,6 +35,7 @@
 
         <header id="Header">
             <?php include 'navBar.php' ?>
+            <?php include 'NavBarStatique.php' ?>
             <div id="Darkmode"><button onclick="switchTheme()" title="Changer de thème de couleur">◐</button></div>
         </header>
         <?php 

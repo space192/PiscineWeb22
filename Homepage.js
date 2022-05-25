@@ -30,7 +30,6 @@ maBoucle(); // on n’oublie pas de lancer la fonction une première fois
 
 function defilement(n)
 {
-	console.log("ca defile " + n)
 	slideImg(indexImage += n);
 }
 

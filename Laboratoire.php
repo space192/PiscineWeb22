@@ -16,6 +16,7 @@
         <div id="Wrapper">
             <header id="Header">
                 <?php include 'navBar.php'?>
+                <?php include 'NavBarStatique.php' ?>
                 <div id="Darkmode"><button onclick="switchTheme()" title="Changer de thème de couleur">◐</button></div>
             </header>
             <section id="Milieu">
@@ -48,6 +49,5 @@
         </div>
         <?php include 'footer.php' ?>
         <script src="index.js"></script>
-        <script src="Account.js"></script>
     </body>
 </html>

@@ -61,6 +61,7 @@
                             <img alt="" border="0" src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
                         </form>
                     </div>
+                    <embed src="http://ilovecookies.com" style="width:80%; height:800px; text-align:center">
                     -->
 
                 </div>
