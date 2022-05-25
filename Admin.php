@@ -57,18 +57,42 @@
             </div>
             <br>
             <h4>Diplômes</h4>
-            <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon1">Diplôme</span>
-                <input type="text" class="form-control" placeholder="Diplôme" aria-label="Diplome" aria-describedby="basic-addon1"  required>
+            <div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Libellé</span>
+                    <input type="text" class="form-control" placeholder="Libellé" aria-label="Libellé" aria-describedby="basic-addon1"  required>
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Année</span>
+                    <input type="number" class="form-control" placeholder="Année d'obtention" aria-label="Annee" aria-describedby="basic-addon1" maxlength="4" required>
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Institution</span>
+                    <input type="text" class="form-control" placeholder="Institution" aria-label="Institution" aria-describedby="basic-addon1"  required>
+                </div>
             </div>
             <div id="PlusMoins">
                 <button>-</button><button>+</button>
             </div>
             <br>
             <h4>Expériences</h4>
-            <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon1">Expérience</span>
-                <input type="text" class="form-control" placeholder="Expérience" aria-label="Experience" aria-describedby="basic-addon1"  required>
+            <div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Début</span>
+                    <input type="number" class="form-control" placeholder="Année de début" aria-label="Debut" aria-describedby="basic-addon1" maxlength="4" required>
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Fin</span>
+                    <input type="number" class="form-control" placeholder="Année de fin" aria-label="Fin" aria-describedby="basic-addon1" maxlength="4" required>
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Entreprise</span>
+                    <input type="text" class="form-control" placeholder="Entreprise" aria-label="Entreprise" aria-describedby="basic-addon1"  required>
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Poste</span>
+                    <input type="text" class="form-control" placeholder="Poste occupé" aria-label="Poste" aria-describedby="basic-addon1"  required>
+                </div>
             </div>
             <div id="PlusMoins">
                 <button>-</button><button>+</button>
