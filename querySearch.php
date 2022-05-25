@@ -3,6 +3,7 @@
 include_once 'const.php';
 if(isset($_POST["search"]) && $_POST["search"] != "")
 {
+    include 'card.php';
     global $mysqlConnection;
     $temp = explode(" ", $_POST["search"]);
     //recherche dans les medecins
@@ -32,12 +33,12 @@ if(isset($_POST["search"]) && $_POST["search"] != "")
     }
     echo("<br>");
     echo("<h2>Médecins</h2>");
+    echo('<div id="deroulant" style="background-color : var(--fond2);">');
     foreach($resultM as $res)
     {
-        echo('<div class="SousBoites" style="text-align:left!important">');
-        echo("<h4>".$res["Prenom"] . " " . $res["Nom"] . "</h4><br> " . $res["Localisation"] . " <br>" . $res["Telephone"] . "<br> ". $res["Mail"] . "<br> " . " <img src='" . $res["pp"] . "'> "."<br/><br/><br/><br/>");
-        echo('</div><br>');
+        card($res);
     }
+    echo('</div><br>');
 }
 else
 {
