@@ -39,4 +39,12 @@ if(isset($_POST["query"]) && isset($_POST["ID"]))
     header('Location: Account.php');
     die;
 }
+
+function getSpe()
+{
+    global $mysqlConnection;
+    $memberStatement = $mysqlConnection->prepare("SELECT ID_spe, Nom_spe FROM Specialite;");
+    $memberStatement->execute();
+    return $memberStatement->fetchAll();
+}
 ?>
