@@ -71,3 +71,33 @@
 {
     display: inline-flex;
 }
+
+#infoservice
+{
+    margin-left: auto;
+    margin-right: auto;
+    color: #266b6b;
+}
+
+#infoservice h5
+{
+    color: #013d42;
+    text-align: left;
+    font-size: 150%;
+    font-weight: 700;
+}
+
+#regleservice
+{
+    margin-left: auto;
+    margin-right: auto;
+    color: #266b6b;
+}
+
+#regleservice h5
+{
+    color: #013d42;
+    text-align: left;
+    font-size: 150%;
+    font-weight: 700;
+}
