@@ -36,7 +36,7 @@
             <?php include 'NavBarStatique.php' ?>
             <div id="Darkmode"><button onclick="switchTheme()" title="Changer de thème de couleur">◐</button></div>
         </header>
-        <?php include 'specialiste.php' ?>
+        <?php include 'specialiste copy.php' ?>
     </div>
 </body>
 
