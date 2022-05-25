@@ -18,16 +18,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript">
-        function showContact(plage) {
+        function effacer() {
 
-            location.href = "RDV.php";
-            document.cookie = "test1=" + plage + "; SameSite=None; Secure";
-
+            let date = event.target.getAttribute('data-arg1');
+            document.cookie = "DateEff=" + date+ "; SameSite=None; Secure";
+            let client = event.target.getAttribute('data-arg2');
+            document.cookie = "ClientEff=" + client + "; SameSite=None; Secure";
+            location.href = "EffacerRDV.php";
         }
 
-        function showChat() {
-            location.href = "chat.php";
-        }
+        
     </script>
 </head>
 
@@ -95,9 +95,17 @@
 
 
                     echo ('</div>');
-                    echo ('<button id="annuler">');
+
+                    echo ('<button id="annuler" onClick="effacer()" data-arg1="');
+                    echo($RDV["Date"]);
+                    echo('" data-arg2="');
+                    echo($RDV["ID_Client"]);
+                    echo('">');
                     echo ('</button>');
                     echo ('</div>');    
+
+
+                      
                 }
                 
             }
