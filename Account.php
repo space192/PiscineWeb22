@@ -31,6 +31,7 @@
                                 <a class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true"><i class="fas fa-user-check"></i> Connection</a>
                                 <a class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false"><i class="fas fa-user-plus"></i> Inscription</a>
                                 <a class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" href="#nav-doctor" role="tab" aria-controls="nav-profile" aria-selected="false"><i class="fa-solid fa-user-doctor"></i> Médecin</a>
+                                <a class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" href="#nav-doctor" role="tab" aria-controls="nav-profile" aria-selected="false"><i class="fa-solid fa-user-gear"></i> Admin</a>
                             </div>
                         </nav>
                         <div class="tab-content" id="ex-with-icons-content">
