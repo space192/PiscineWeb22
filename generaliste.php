@@ -26,7 +26,7 @@ foreach ($result as $elem) {
         <div id="options">
         <div id="profil">
         <div id="titre" >');
-    echo ($elem["Nom"] . " " . $elem["Prenom"]);
+    echo ($elem["Prenom"] . " " . $elem["Nom"]);
     echo ('</div>');
 
     echo ('<div id="photo">');
