@@ -30,141 +30,148 @@
                         labo.biologie@omnessante.fr<br><br>
                     </div>
                     <div id="Services">
-                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" style="height:35px; width:300px; margin-left:auto; margin-right:auto; background-color:#013d42;">
-                            Nos services
-                        </button>
-                        <div class="collapse" id="collapseExample" style="text-align:center; margin-left: auto; margin-right: auto;">
-                            <!--Dépistage COVID-19-->
-                            <div class="card card-body" style="background-color:#266b6b; text-align:center; margin-left: auto; margin-right: auto;">
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#covidM"style="background-color:transparent;">
-                                    Dépistage COVID-19
+                        <div class="container">
+                            <div class="row align-items-start">
+                                <div class="col">
+                                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" style="height:35px; width:300px; margin-left:auto; margin-right:auto; background-color:#013d42;">
+                                    Nos services
                                 </button>
-                                <div class="modal fade" id="covidM" tabindex="-1" aria-labelledby="covid" aria-hidden="true">
-                                    <div class="modal-dialog modal-lg">
-                                        <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title">Dépistage COVID-19</h5>
+                                <div class="collapse" id="collapseExample" style="text-align:center; margin-left: auto; margin-right: auto;">
+                                    <!--Dépistage COVID-19-->
+                                    <div class="card card-body" style="background-color:#266b6b; text-align:center; margin-left: auto; margin-right: auto;">
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#covidM"style="background-color:transparent;">
+                                            Dépistage COVID-19
+                                        </button>
+                                        <div class="modal fade" id="covidM" tabindex="-1" aria-labelledby="covid" aria-hidden="true">
+                                            <div class="modal-dialog modal-lg">
+                                                <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title">Dépistage COVID-19</h5>
+                                                </div>
+                                                <div class="modal-body">
+                                                    ...
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                                </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="modal-body">
-                                            ...
+                                    </div>
+                                    <!--Biologie préventive-->
+                                    <div class="card card-body" style="background-color:#266b6b;">
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#preventiveM"style="background-color:transparent;">
+                                            Biologie préventive
+                                        </button>
+                                        <div class="modal fade" id="preventiveM" tabindex="-1" aria-labelledby="preventive" aria-hidden="true">
+                                            <div class="modal-dialog modal-lg">
+                                                <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title">Biologie préventive</h5>
+                                                </div>
+                                                <div class="modal-body">
+                                                    ...
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                                </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                    <!--Biologie de la femme enceinte-->
+                                    <div class="card card-body" style="background-color:#266b6b;">
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#femmeM"style="background-color:transparent;">
+                                            Biologie de la femme enceinte
+                                        </button>
+                                        <div class="modal fade" id="femmeM" tabindex="-1" aria-labelledby="femme" aria-hidden="true">
+                                            <div class="modal-dialog modal-lg">
+                                                <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="femme">Biologie de la femme enceinte</h5>
+                                                </div>
+                                                <div class="modal-body">
+                                                    ...
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                                </div>
+                                                </div>
+                                            </div>
                                         </div>
+                                    </div>
+                                    <!--Biologie de routine-->
+                                    <div class="card card-body" style="background-color:#266b6b;">
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#routineM"style="background-color:transparent;">
+                                            Biologie de routine
+                                        </button>
+                                        <div class="modal fade" id="routineM" tabindex="-1" aria-labelledby="routine" aria-hidden="true">
+                                            <div class="modal-dialog modal-lg">
+                                                <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="routine">Biologie de routine</h5>
+                                                </div>
+                                                <div class="modal-body">
+                                                    ...
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                                </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Cancérologie-->
+                                    <div class="card card-body" style="background-color:#266b6b;">
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#cancerM"style="background-color:transparent;">
+                                            Cancérologie
+                                        </button>
+                                        <div class="modal fade" id="cancerM" tabindex="-1" aria-labelledby="cancer" aria-hidden="true">
+                                            <div class="modal-dialog modal-lg">
+                                                <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="cancer">Cancérologie</h5>
+                                                </div>
+                                                <div class="modal-body">
+                                                    ...
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                                </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Gynécologie-->
+                                    <div class="card card-body" style="background-color:#266b6b;">
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#gynecoM"style="background-color:transparent;">
+                                            Gynécologie
+                                        </button>
+                                        <div class="modal fade" id="gynecoM" tabindex="-1" aria-labelledby="gyneco" aria-hidden="true">
+                                            <div class="modal-dialog modal-lg">
+                                                <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="gyneco">Gynécologie</h5>
+                                                </div>
+                                                <div class="modal-body">
+                                                    ...
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                                </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <!--Biologie préventive-->
-                            <div class="card card-body" style="background-color:#266b6b;">
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#preventiveM"style="background-color:transparent;">
-                                    Biologie préventive
-                                </button>
-                                <div class="modal fade" id="preventiveM" tabindex="-1" aria-labelledby="preventive" aria-hidden="true">
-                                    <div class="modal-dialog modal-lg">
-                                        <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title">Biologie préventive</h5>
-                                        </div>
-                                        <div class="modal-body">
-                                            ...
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-primary">Save changes</button>
-                                        </div>
-                                        </div>
-                                    </div>
                                 </div>
-                            </div>
-                            <!--Biologie de la femme enceinte-->
-                            <div class="card card-body" style="background-color:#266b6b;">
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#femmeM"style="background-color:transparent;">
-                                    Biologie de la femme enceinte
-                                </button>
-                                <div class="modal fade" id="femmeM" tabindex="-1" aria-labelledby="femme" aria-hidden="true">
-                                    <div class="modal-dialog modal-lg">
-                                        <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="femme">Biologie de la femme enceinte</h5>
-                                        </div>
-                                        <div class="modal-body">
-                                            ...
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-primary">Save changes</button>
-                                        </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--Biologie de routine-->
-                            <div class="card card-body" style="background-color:#266b6b;">
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#routineM"style="background-color:transparent;">
-                                    Biologie de routine
-                                </button>
-                                <div class="modal fade" id="routineM" tabindex="-1" aria-labelledby="routine" aria-hidden="true">
-                                    <div class="modal-dialog modal-lg">
-                                        <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="routine">Biologie de routine</h5>
-                                        </div>
-                                        <div class="modal-body">
-                                            ...
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-primary">Save changes</button>
-                                        </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--Cancérologie-->
-                            <div class="card card-body" style="background-color:#266b6b;">
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#cancerM"style="background-color:transparent;">
-                                    Cancérologie
-                                </button>
-                                <div class="modal fade" id="cancerM" tabindex="-1" aria-labelledby="cancer" aria-hidden="true">
-                                    <div class="modal-dialog modal-lg">
-                                        <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="cancer">Cancérologie</h5>
-                                        </div>
-                                        <div class="modal-body">
-                                            ...
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-primary">Save changes</button>
-                                        </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--Gynécologie-->
-                            <div class="card card-body" style="background-color:#266b6b;">
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#gynecoM"style="background-color:transparent;">
-                                    Gynécologie
-                                </button>
-                                <div class="modal fade" id="gynecoM" tabindex="-1" aria-labelledby="gyneco" aria-hidden="true">
-                                    <div class="modal-dialog modal-lg">
-                                        <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="gyneco">Gynécologie</h5>
-                                        </div>
-                                        <div class="modal-body">
-                                            ...
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-primary">Save changes</button>
-                                        </div>
-                                        </div>
-                                    </div>
-                                </div>
+
                             </div>
                         </div>
                     </div>

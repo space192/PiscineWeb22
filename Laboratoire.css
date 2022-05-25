@@ -59,4 +59,15 @@
     margin-right: auto;
     display: flex;
     width: 70%;
+    max-width: 500px;
+}
+
+#Services div
+{
+    margin-top: 15px;
+}
+
+.card-body
+{
+    display: inline-flex;
 }
