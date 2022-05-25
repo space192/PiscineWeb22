@@ -1,0 +1,9 @@
+h2, h3, h4
+{
+    color: var(--eceText);
+}
+
+.SousBoites
+{
+    color: var(--textBase);
+}
