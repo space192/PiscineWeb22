@@ -73,28 +73,41 @@
                     $memberStatement->execute();
                     $data = $memberStatement->fetchAll();
                     echo ('<div id="cardRDV">');
-                    echo ('<div id="detailsRDV">');
 
-                    echo ('<div id="textDetails">');
-                    echo('<div id="titreD">');
-                    echo('Medecin :');
-                    echo ('</div>');
-                    echo('<div id="descriptionD">');
+                   // echo ('<div id="detailsRDV">');
+                    echo ('<div id="detailsProfil">');
+                    echo('<div id="titre">');
+                    echo('Votre practicien : <br>');
                     echo($data[0]["Nom"] . $data[0]["Prenom"]);
                     echo ('</div>');
-                    echo ('</div>');
+                    echo ('<div id="photoProfil">');
+                    echo ('<img src="' . $data[0]["pp"] . '" id="image">');
+                    echo ('</div> ');
+                    echo ('</div> ');
+                   // echo ('</div>');
 
+
+                    echo ('<div id="detailsRDV">');
                     echo ('<div id="textDetails">');
                     echo('<div id="titreD">');
                     echo('Date :');
                     echo ('</div>');
                     echo('<div id="descriptionD">');
-                    echo($RDV["Date"]);
+                    echo(substr($RDV["Date"],0,10));
                     echo ('</div>');
                     echo ('</div>');
 
+                    echo ('<div id="textDetails">');
+                    echo('<div id="titreD">');
+                    echo('Heure :');
+                    echo ('</div>');
+                    echo('<div id="descriptionD">');
+                    echo(substr($RDV["Date"],10));
+                    echo ('</div>');
+                    echo ('</div>');
 
                     echo ('</div>');
+
 
                     echo ('<button id="annuler" onClick="effacer()" data-arg1="');
                     echo($RDV["Date"]);
