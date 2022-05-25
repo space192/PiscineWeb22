@@ -40,6 +40,39 @@
                 <span class="input-group-text" id="basic-addon1">Photo de profil</span>
                 <input type="file" class="form-control" placeholder="Photo de profil" aria-label="Photo de profil" aria-describedby="basic-addon1"  required>
             </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Spécialité</span>
+                <select class="form-select" aria-label="Default select example" required>
+                    <option selected>Sélectionnez une spécialité</option>
+                    <option value="0">Généraliste</option>
+                    <option value="1">Addictologue</option>
+                    <option value="2">Andrologue</option>
+                    <option value="3">Cardiologue</option>
+                    <option value="4">Dermatologue</option>
+                    <option value="5">Gastro-Hépato-Entérologue</option>
+                    <option value="6">Gynécologue</option>
+                    <option value="7">Infirmière de Santé au Travail</option>
+                    <option value="8">Ostéopathe</option>
+                </select>
+            </div>
+            <br>
+            <h4>Diplômes</h4>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Diplôme</span>
+                <input type="text" class="form-control" placeholder="Diplôme" aria-label="Diplome" aria-describedby="basic-addon1"  required>
+            </div>
+            <div id="PlusMoins">
+                <button>-</button><button>+</button>
+            </div>
+            <br>
+            <h4>Expériences</h4>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Expérience</span>
+                <input type="text" class="form-control" placeholder="Expérience" aria-label="Experience" aria-describedby="basic-addon1"  required>
+            </div>
+            <div id="PlusMoins">
+                <button>-</button><button>+</button>
+            </div>
             <button type="submit" class="BoutonEnvoi">Ajouter le profil</button>
         </form>
     </div>

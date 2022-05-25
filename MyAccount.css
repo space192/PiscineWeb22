@@ -13,6 +13,11 @@ h3, h4
     color: var(--textSousText);
 }
 
+h4
+{
+    text-align: left!important;
+}
+
 .SousBoites
 {
     max-width: 850px;
@@ -105,8 +110,31 @@ h3, h4
     -o-border-radius: 8px;
 }
 
+#PlusMoins
+{
+    text-align: right;
+}
+
+#PlusMoins button
+{
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    margin-right: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
 .table, tr, td, thead
 {
     color: var(--textBase);
     border-color: var(--textBase)!important;
+}
+
+.form-select
+{
+    background-color: var(--fond1);
+    color: var(--textBase);
 }
