@@ -24,7 +24,7 @@
         <div id="BarreRecherche">
             <form id="search" method="post" action="querySearch.php">
                 <div id="Recherche">
-                    <i class="fa-solid fa-magnifying-glass"></i><input type="text" autocomplete="off" placeholder="Nom, spécialité, ..."/>
+                    <i class="fa-solid fa-magnifying-glass"></i><input type="text" name="search" autocomplete="off" placeholder="Nom, spécialité, ..."/>
                     <button type="submit" id="SubmitRecherche">Rechercher</button>
                 </div>
             </form>
