@@ -1,4 +1,5 @@
 <br><br>
+<?php include_once 'queryAdmin.php'?>
 <div class="Boites">
     <h2>Gestion des professionnels de santé</h2>
     <div class="SousBoites">
@@ -45,6 +46,8 @@
     <br>
     <div class="SousBoites">
         <h3>Supprimer un professionnel de santé</h3>
+        <?php $result = getMed();?>
+        <?php $result2 = getUsers();?>
         <table class="table">
             <thead>
                 <tr>
@@ -54,11 +57,13 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Octave</td>
-                    <td>Ergébel</td>
-                    <td><button>Supprimer</button></td>
-                </tr>
+                <?php foreach($result as $res):?>
+                    <tr>
+                        <td><?php echo($res["Prenom"]);?></td>
+                        <td><?php echo($res["Nom"]);?></td>
+                        <td><form method="post" action="queryAdmin.php"><button name="ID" value=<?php echo('"'.$res["ID"].'"');?>>Supprimer</button><input hidden name="query" value="1"/></form></td>
+                    </tr>
+                <?php endforeach;?>
             </tbody>
         </table>
     </div>
@@ -79,12 +84,14 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Octave</td>
-                    <td>Ergébel</td>
-                    <td>test@example.com</td>
-                    <td><button>Promouvoir en administrateur</button></td>
-                </tr>
+                <?php foreach($result2 as $res):?>
+                    <tr>
+                        <td><?php echo($res["Prenom"])?></td>
+                        <td><?php echo($res["Nom"])?></td>
+                        <td><?php echo($res["Mail"])?></td>
+                        <td><form method="post" action="queryAdmin.php"><button name="ID" value=<?php echo('"'.$res["ID"].'"');?>>Promouvoir en administrateur</button><input hidden name="query" value="2"/></form></td>
+                    </tr>
+                <?php endforeach;?>
             </tbody>
         </table>
     </div>

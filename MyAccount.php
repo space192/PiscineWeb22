@@ -236,4 +236,3 @@
         </form>
     </div>
 </div>
-<?php include 'Admin.php' ?>

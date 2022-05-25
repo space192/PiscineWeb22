@@ -44,6 +44,42 @@ function loginM()
         }
     }
 }
+function loginA()
+{
+    if(isset($_POST["Prenom"]) && isset($_POST["Nom"]) && isset($_POST["Mail"]))
+    {
+        global $mysqlConnection;
+        $memberStatement = $mysqlConnection->prepare("SELECT * FROM utilisateur WHERE LOWER(Prenom)='". strtolower($_POST["Prenom"]) ."' AND LOWER(Nom)='". strtolower($_POST["Nom"]) ."' AND LOWER(Mail)='" . strtolower($_POST["Mail"]) . "' AND ADMIN='1';");
+        $memberStatement->execute();
+        $result = $memberStatement->fetch();
+        if($result != False)
+        {
+            setcookie(
+                'ADMIN',
+                '1',
+                [
+                    'expires' => time() + 365*24*3600,
+                    'secure' => true,
+                    'httponly' => true,
+                ]
+            );
+            setcookie(
+                'LOGGED_USER',
+                $_POST["Mail"],
+                [
+                    'expires' => time() + 365*24*3600,
+                    'secure' => true,
+                    'httponly' => true,
+                ]
+            );
+            return $result;
+        }
+        else
+        {
+            return false;
+        }
+    }
+}
 
 function loginU()
 {
@@ -200,6 +236,7 @@ if(isset($_POST["query"]))
         case 3: loginM(); break; //login pour les medecins
         case 4: loginU(); break; //login pour les useurs
         case 5: if(!fieldChange()){header('Location: Account.php?error=1');die();}; break;
+        case 6: loginA(); break;
     }
     header('Location: Account.php');
     die();
