@@ -1,10 +1,10 @@
 #Darkmode
 {
     position: absolute;
-    right: 10px;
-    top:15px;
+    right: 2px;
+    top:-35px;
     background-color: var(--ece2);
-    padding: 15px;
+    padding: 10px;
     border-radius: 0.5rem;
     -webkit-border-radius: 0.5rem;
     -moz-border-radius: 0.5rem;
