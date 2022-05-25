@@ -1,3 +1,8 @@
+
+body{
+    background-color: var(--fond1);
+  }
+
 #cardRDV {
     width: 700px;
     height: 250px;
