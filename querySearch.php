@@ -24,7 +24,7 @@ if(isset($_POST["search"]) && $_POST["search"] != "")
     $memberStatement->execute();
     $resultS = $memberStatement->fetchAll();
     echo("<br>");
-    echo("<h2>Sercives</h2>");
+    echo("<h2>Services</h2>");
     foreach($resultS as $res)
     {
         echo('<div class="SousBoites" style="text-align:left!important">');

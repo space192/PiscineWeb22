@@ -1,4 +1,4 @@
-#BoutonPayer
+#BoutonChater
 {
     border-radius: 8px;
     height: 60px;
@@ -14,7 +14,7 @@
     -o-border-radius: 8px;
 }
 
-#BoutonPayer:hover
+#BoutonChater:hover
 {
     background: #013d42!important;
     color: white;
@@ -34,50 +34,7 @@
     font-size: 21px;
     cursor: pointer;
 }
-.modal-body
-{
-    height: 450px;
-}
-.nav-tabs
-{
-    border:none !important;
-}
-.nav-tabs .nav-link.active
-{
-    color: var(--textBase);
-    background-color: var(--fond2)!important;
-    border-color: var(--fond1) var(--fond2) var(--fond1);
-    border-top: 3px solid var(--ece) !important;
-}
-.nav-link:not(.active)
-{
-    color: var(--textBase);
-    background-color: var(--ece)!important;
-    border-color: var(--fond1) var(--fond2) var(--fond1);
-    border-top: 3px solid var(--ece) !important;
-}
-.nav-tabs .nav-link
-{
-    margin-bottom: -1px;
-    border: 1px solid transparent;
-    border-top-left-radius: 0rem;
-    border-top-right-radius: 0rem;
-    border-top: 3px solid var(--fond1);
-    font-size: 20px;
-}
-.nav-tabs .nav-link:hover
-{
-    border-color: var(--fond2) var(--fond1) var(--fond1);
-}
-.nav-tabs
-{
-    display: table !important;
-    width: 100%;
-}
-.nav-item
-{
-    display: table-cell;
-}
+
 .form-control
 {
     border-bottom: 1px solid var(--fond1) !important;
@@ -147,11 +104,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button
     -ms-transform: translateX(-0px) translateY(-15px);
     -o-transform: translateX(-0px) translateY(-15px);
 }
-.pay button
-{
-    height: 47px;
-    border-radius: 37px;
-}
+
 
 .mt-3, h5
 {
@@ -169,16 +122,18 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button
     color: var(--textBase);
 }
 
-.modal-body
+.modal-body, .modal-title
 {
     background-color: var(--fond1);
     color: var(--textBase);
 }
+
 .modal-content
 {
     border-color: var(--fond2)!important;
     background-color: var(--fond2)!important;
 }
+
 .active
 {
     background-color: var(--fond2);
@@ -187,7 +142,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button
 
 .form-control
 {
-    border: none;
+    border: solid 1px #6c757d!important;
     outline: none;
     box-sizing: border-box;
     background-color: var(--fond1)!important;
@@ -199,4 +154,26 @@ a
 {
     color: var(--textBase)!important;
     text-decoration: none;
+}
+
+.close
+{
+    color: var(--textBase)!important;
+}
+
+
+#ChatBox
+{
+    text-align: left;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    padding: 10px;
+    background: var(--fond2);
+    height: auto;
+    min-height: 30vh;
+    width: auto;
+    border: 1px solid #a7a7a7;
+    overflow: auto;
+    border-radius: 4px;
+    border-bottom: 4px solid #a7a7a7;
 }

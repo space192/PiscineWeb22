@@ -2,7 +2,7 @@
 <img src="Images/Decor/LogoOmnesSante.png" alt="Logo omnes santé">
     <div id="FooterCentre">
         <p>© 2022 <a href="mailto:adrien.blair@edu.ece.fr">Adrien BLAIR</a> - <a href="mailto:arthur.fournier@edu.ece.fr">Arthur FOURNIER</a> - 
-        <a href="mailto:donatien.chevillard@edu.ece.fr">Donatien CHEVILLARD</a> - <a href="mailto:pierre-louis.paillet@edu.ece.fr">Pierre-Louis PAILLET</a> pour OMNES Santé<br>
+        <a href="mailto:donatien.chevillard@edu.ece.fr">Donatien CHEVILLARD</a> - <a href="mailto:pierrelouis.paillet@edu.ece.fr">Pierre-Louis PAILLET</a> pour OMNES Santé<br>
         OMNES Santé est une marque du groupe OMNES<br>
         Direction OMNES : 43, quai de Grenelle – Tour Greenelle – 75015 PARIS<br>RCS Paris 445 260 169<br>SAS au capital de 9 041 900 euros<br>
         <i class="fa-solid fa-cookie"></i> Ce site utilise des cookies pour vous fournir une meilleure expérience de navigation.</p>

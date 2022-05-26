@@ -10,6 +10,8 @@
     --pointActif: #717171;
     --pointInactif: #bbbbbb;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: var(--fond1)!important;
+    --bs-body-bg: var(--ece2)!important;
 }
 
 :root.dark
@@ -23,12 +25,20 @@
     --eceText: #339191;
     --pointActif: whitesmoke;
     --pointInactif: grey;
+    --bs-body-bg: var(--ece2)!important;
+}
+
+html
+{
+    height: 100%!important;
 }
 body
 {
+    min-height: 100%!important;
     background-color: var(--fond1);
     color: var(--textBase);
 }
+
 
 #Darkmode
 {
