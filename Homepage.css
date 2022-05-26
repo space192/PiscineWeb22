@@ -4,7 +4,7 @@ html, body {height:80%;margin:0;}
 #Toutenhaut
 {
     background-color: var(--fond2);
-    height: 90%;
+    height: 70%;
     margin-bottom: 50px;
     padding-top: 10px;
     text-align: center;
@@ -78,7 +78,7 @@ html, body {height:80%;margin:0;}
     background-color: #252526e0;
     padding: 10px;
     text-align: center;
-    top: 45%;
+    top: 55%;
     left: 0;
     right: 0;
     margin-left: auto;

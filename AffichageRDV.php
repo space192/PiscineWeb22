@@ -46,6 +46,7 @@
             <?php include 'NavBarStatique.php' ?>
             <div id="Darkmode"><button onclick="switchTheme()" title="Changer de thème de couleur">◐</button></div>
         </header>
+        <section id="Milieu" >
         <?php 
             $memberStatement = $mysqlConnection->prepare("SELECT * FROM EDT_Medecin ;");
             $memberStatement->execute();
@@ -229,6 +230,7 @@
         
         
         ?>
+        </section>
     </div>
     <?php include 'footer.php' ?>
 </body>

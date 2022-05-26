@@ -19,15 +19,15 @@ $imgCarrousel = [
     ],
     [
         "img" => "images/Laboratoires/laboratoire1.jpg",
-        "legend" => "Trop marrant",
+        "legend" => "Nos laboratoires sont modernes et accessibles à tous",
     ],
     [
         "img" => "images/Laboratoires/laboratoire2.jpg",
-        "legend" => "C'est joli",
+        "legend" => "Il y a forcément un laboratoire partenaire OMNES Santé dans votre région",
     ],
     [
         "img" => "images/Specialistes/Octave_Ergebel.jpg",
-        "legend" => "Docteur Octave Ergébel",
+        "legend" => "Les spécialistes OMNES Santé sont reconnus à travers le monde",
     ],
 ];
 
