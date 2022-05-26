@@ -16,7 +16,7 @@ foreach($imgSpe as $spe)
         echo('<div class="carousel-item">');
     }
     echo('<div class="CarrouselBandeRelou">');
-    echo('<h2>'. $spe["nom"] .'</h2>');
+    echo('<h2>Dr. '. $spe["nom"] .'</h2>');
     echo('<img src="'. $spe["img"] .'" class="d-block w-100" alt="Aïcha_Fémal">');
     echo('</div>');
     echo('</div>');

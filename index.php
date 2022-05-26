@@ -23,8 +23,8 @@
             <?php include 'navBar.php'?>
             <section id="Milieu">
                 <div class="Boites">
-                    <h1>Informations de Santé publique</h1>
-                    <p>Bienvenue sur Omnes Santé. Accédez <b>rapidement</b> aux disponibilités de tous vos professionnels de santé. Prenez des décisions <b>éclairées</b> et adaptées à vos besoins de santé.<br>
+                    <h1>Bienvenue sur Omnes Santé</h1>
+                    <p>Accédez <b>rapidement</b> aux disponibilités de tous vos professionnels de santé. Prenez des décisions <b>éclairées</b> et adaptées à vos besoins de santé.<br>
                     Réservez une consultation physique ou vidéo chez votre professionnel de santé en quelques clics.</p>
                     <br>
                     <h1>Informations de Santé publique</h1>
@@ -42,29 +42,9 @@
                     </div>
                     <br>
                     <h1>Evènement de la semaine</h1>
-                    <p>Mettre une info bidon.</p>
+                    <p>Le 20 mai 2022, Mme Brigitte Bourguignon a été nommée ministre de la santé et de la prévention et M. Damien Abad a été nommé ministre des solidarités, de l’autonomie et des personnes handicapées, au sein du gouvernement de Mme Elisabeth Borne, Première ministre.</p>
                     <h1>Les spécialistes de santé Omnes Santé</h1>
-                    <p>Carrousel supplémentaire ou simplement des fiches profil.</p>
                     <?php include 'CarrousselB.php' ?>
-                    <!--LE PAYPAL
-                    <div class="SousBoites">
-                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                            <input type="hidden" name="cmd" value="_s-xclick">
-                            <input type="hidden" name="hosted_button_id" value="FB67VDTHFLDPJ">
-                            <table>
-                            <tr><td><input type="hidden" name="on0" value="Prestation">Prestation</td></tr><tr><td><select name="os0">
-                                <option value="Consultation">Consultation €27,00 EUR</option>
-                                <option value="Test en laboratoire">Test en laboratoire €42,00 EUR</option>
-                                <option value="M. Hina">M. Hina €0,01 EUR</option>
-                            </select> </td></tr>
-                            </table>
-                            <input type="hidden" name="currency_code" value="EUR">
-                            <input type="image" src="https://www.paypalobjects.com/fr_FR/FR/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" alt="PayPal, le réflexe sécurité pour payer en ligne">
-                            <img alt="" border="0" src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
-                        </form>
-                    </div>
-                    <embed src="http://ilovecookies.com" style="width:80%; height:800px; text-align:center">
-                    -->
                 </div>
             </section>
         </div>
