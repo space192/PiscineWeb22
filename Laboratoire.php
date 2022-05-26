@@ -68,8 +68,9 @@
                                 <div class="collapse" id="collapseExample" style="text-align:center; margin-left: auto; margin-right: auto;">
                                     <?php foreach($result as $res):?>
                                         <div class="card card-body" style="background-color:#266b6b; text-align:justify; margin-left: auto; margin-right: auto;">
-                                            <button type="button"  onclick=reserverS(<?php echo($res["ID_Service"]);?>,<?php echo($resultL[0]["ID_Labo"]);?>)  class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#covidM"style="background-color:transparent;">
+                                            <button type="button"    class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#covidM"style="background-color:transparent;">
                                                 <?php echo($res["Nom"]);?>
+                                                <?php $idS = $res["ID_Service"];?>
                                             </button>
                                             <div class="modal fade" id="covidM" tabindex="-1" aria-labelledby="covid" aria-hidden="true">
                                                 <div class="modal-dialog modal-lg">
@@ -88,6 +89,7 @@
                                                             </div>
                                                         </div>
                                                         <div class="modal-footer">
+                                                            <button type="button" onclick=reserverS(<?php echo($res["ID_Service"]);?>,<?php echo($resultL[0]["ID_Labo"]);?>) class="btn btn-secondary" data-bs-dismiss="modal">Réserver</button>
                                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                                         </div>
                                                     </div>
