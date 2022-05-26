@@ -1,4 +1,4 @@
-#BoutonChater
+.BoutonChater
 {
     border-radius: 8px;
     height: 60px;
@@ -14,7 +14,7 @@
     -o-border-radius: 8px;
 }
 
-#BoutonChater:hover
+.BoutonChater:hover
 {
     background: #013d42!important;
     color: white;
@@ -162,7 +162,7 @@ a
 }
 
 
-#ChatBox
+.ChatBox
 {
     text-align: left;
     margin: 0 auto;

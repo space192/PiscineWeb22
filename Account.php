@@ -45,6 +45,7 @@
             <?php elseif (isset($_SESSION["LOGGED"]) || isset($_COOKIE["LOGGED_USER"])) : ?>
                 <?php include 'MyAccount.php' ?>
                 <?php if(isset($_COOKIE["ADMIN"])){include 'Admin.php';};?>
+                <?php if(isset($_SESSION["Medecin"])){include 'MedecinA.php';};?>
             <?php endif; ?>
         </section>
     </div>

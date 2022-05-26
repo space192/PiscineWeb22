@@ -23,6 +23,7 @@
             <?php include 'navBar.php'?>
             <section id="Milieu">
                 <div class="Boites">
+                    <?php $_GET["TEST"] = "salut";?>
                     <?php include 'chat.php' ?>
                 </div>
             </section>

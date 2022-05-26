@@ -17,8 +17,10 @@ function card($elem)
     if (isset($_SESSION["LOGGED"]) || isset($_COOKIE["LOGGED_USER"]))
     {
         echo('<button id="button"  onclick="showContact(' . $elem["dispo"] . $id . ')">Prendre un rendez vous </button>');
-        echo('<button id="button"  onclick="showChat()">Communiquez avec le médecin</button>');
+        echo('<button id="button" type="button" data-toggle="modal" data-target="#staticBackdrop'.$id .'">Communiquez avec le médecin</button>');
+        include 'chat.php';
     }
+    
     
     echo ('<button id="button"' . 'onclick="location.href=' . "'CV.php?ID=" . $id . "'" . '"' . '>Voir son CV</button>
             </div> </div><div id="general">

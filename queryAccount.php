@@ -24,6 +24,15 @@ function getAccount()
     }
 }
 
+function getAccountM()
+{
+    global $mysqlConnection;
+    $memberStatement = $mysqlConnection->prepare("SELECT * FROM Medecin WHERE ID='". $_SESSION["ID"]."';");
+    $memberStatement->execute();
+    $result = $memberStatement->fetch();
+    return $result;
+}
+
 function loginM()
 {
     if(isset($_POST["Prenom"]) && isset($_POST["Nom"]) && isset($_POST["Mail"]))
@@ -34,7 +43,10 @@ function loginM()
         $result = $memberStatement->fetch();
         if($result != False)
         {
-            echo("oui");
+            $_SESSION["Medecin"] = "1";
+            $_SESSION["LOGGED"] = $_POST["Mail"];
+            $_SESSION["Prenom"] = $result["Prenom"];
+            $_SESSION["ID"] = $result["ID"];
             return $result;
         }
         else
@@ -86,7 +98,7 @@ function loginU()
     if(isset($_POST["Mail"]) && isset($_POST["pwd"]) )
     {
         global $mysqlConnection;
-        $memberStatement = $mysqlConnection->prepare("SELECT ID,Mail FROM utilisateur WHERE LOWER(Mail)='". strtolower($_POST["Mail"]) ."' AND pwd='". hash('sha256', $_POST['pwd']) ."';");
+        $memberStatement = $mysqlConnection->prepare("SELECT ID,Mail,Prenom FROM utilisateur WHERE LOWER(Mail)='". strtolower($_POST["Mail"]) ."' AND pwd='". hash('sha256', $_POST['pwd']) ."';");
         $memberStatement->execute();
         $result = $memberStatement->fetch();
         if($result != False)
@@ -102,10 +114,30 @@ function loginU()
                         'httponly' => true,
                     ]
                 );
+                setcookie(
+                    'Prenom',
+                    $result["Prenom"],
+                    [
+                        'expires' => time() + 365*24*3600,
+                        'secure' => true,
+                        'httponly' => true,
+                    ]
+                );
+                setcookie(
+                    'ID',
+                    $result["ID"],
+                    [
+                        'expires' => time() + 365*24*3600,
+                        'secure' => true,
+                        'httponly' => true,
+                    ]
+                );
             }
             else
             {
                 $_SESSION["LOGGED"] = $_POST["Mail"];
+                $_SESSION["Prenom"] = $result["Prenom"];
+                $_SESSION["ID"] = $result["ID"];
             }
             return $result;
         }

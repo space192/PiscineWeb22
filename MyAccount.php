@@ -1,5 +1,5 @@
 <?php include 'queryAccount.php' ?>
-<?php $result = getAccount() ?>
+<?php $result = isset($_SESSION["Medecin"]) ? getAccountM() : getAccount(); ?>
 <link rel="stylesheet" href="MyAccount.css">
 <div class="Boites">
     <h2>Modifier votre profil</h2>
@@ -56,6 +56,7 @@
                     </div>
                 </div>
             </div>
+            <?php if(!isset($_SESSION["Medecin"])):?>
             <div class="accordion-item">
                 <h2 class="accordion-header" id="Identite3">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Identite3C" aria-expanded="false" aria-controls="Identite3C">
@@ -75,9 +76,11 @@
                     </div>
                 </div>
             </div>
+            <?php endif;?>
         </div>
     </div>
     <br>
+    <?php if(!isset($_SESSION["Medecin"])):?>
     <div class="SousBoites" style="max-width: 850px;">
         <h3>Domicile</h3>
         <div class="accordion accordion-flush" id="accordionFlushDomicile">
@@ -160,6 +163,7 @@
             </div>
         </div>
     </div>
+    <?php endif;?>
     <br>
     <div class="SousBoites" style="max-width: 850px;">
         <h3>Contact</h3>
@@ -208,6 +212,7 @@
                     </div>
                 </div>
             </div>
+            <?php if(!isset($_SESSION["Medecin"])):?>
             <div class="accordion-item">
                 <h2 class="accordion-header" id="Connexion2">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Connexion2C" aria-expanded="false" aria-controls="Connexion2C">
@@ -226,6 +231,27 @@
                     </div>
                 </div>
             </div>
+            <?php else:?>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="Connexion2">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Connexion2C" aria-expanded="false" aria-controls="Connexion2C">
+                            Digicode
+                        </button>
+                    </h2>
+                    <div id="Connexion2C" class="accordion-collapse collapse" aria-labelledby="Connexion2" data-bs-parent="#accordionFlushConnexion">
+                        <div class="accordion-body">
+                            <div class="Actuel">Digicode actuelle : <?php echo ($result["Digicode"]); ?></div>
+                            <div class="input-group mb-3">
+                                <form method="post" action="queryAccount.php">
+                                    <input pattern='^[0-9]*$' name="Digicode" class="form-control" placeholder="Nouveau Digicode" aria-label="Mdp" minlength="4" maxlength="4" aria-describedby="button-addon2" required>
+                                    <button class="btn btn-outline-secondary" type="sumbit" id="ChangementMdp">Changer de mot de passe</button>
+                                    <input hidden name="query" value="5" />
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <?php endif;?>
         </div>
     </div>
     <br>
