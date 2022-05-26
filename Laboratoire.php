@@ -32,10 +32,6 @@
                 <div class="Boites" id="boite">
                     <div id="infos">
                     <?php $IDL = $_GET["IDL"]; 
-
-                    include_once 'const.php';
-
-                    global $mysqlConnection;
                     $memberStatement = $mysqlConnection->prepare("SELECT * FROM Labo WHERE ID_Labo = $IDL ;");
                     $memberStatement->execute();
                     $resultL = $memberStatement->fetchAll();
@@ -68,15 +64,15 @@
                                 <div class="collapse" id="collapseExample" style="text-align:center; margin-left: auto; margin-right: auto;">
                                     <?php foreach($result as $res):?>
                                         <div class="card card-body" style="background-color:#266b6b; text-align:justify; margin-left: auto; margin-right: auto;">
-                                            <button type="button"    class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#covidM"style="background-color:transparent;">
+                                            <button type="button"  class="btn btn-primary" data-bs-toggle="modal" data-bs-target=<?php echo('"#myModal' . $res["ID_Service"] .'"');?> style="background-color:transparent;">
                                                 <?php echo($res["Nom"]);?>
                                                 <?php $idS = $res["ID_Service"];?>
                                             </button>
-                                            <div class="modal fade" id="covidM" tabindex="-1" aria-labelledby="covid" aria-hidden="true">
+                                            <div class="modal fade" id=<?php echo('"myModal' . $res["ID_Service"] .'"');?> tabindex="-1"  aria-hidden="true">
                                                 <div class="modal-dialog modal-lg">
                                                     <div class="modal-content">
                                                         <div class="modal-header">
-                                                            <h5 class="modal-title" style="font-size:170%; font-weight:800; color: #013d42;">Dépistage COVID-19</h5>
+                                                            <h5 class="modal-title" style="font-size:170%; font-weight:800; color: #013d42;"><?php echo($res["Nom"]);?></h5>
                                                         </div>
                                                         <div class="modal-body">
                                                             <div id="infoservice">
