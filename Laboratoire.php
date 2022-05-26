@@ -12,7 +12,14 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <script src="https://kit.fontawesome.com/c6c9e611bb.js" crossorigin="anonymous"></script>
         <?php include 'queryLab.php'?>
+        <?php include_once 'const.php'?>
         <?php $result = getinfoLabG();?>
+        <script>
+            function reserverS(id, idl)
+            {
+                location.href = "RDVLabo.php?IDS=" + id +"&IDL=" + idl ;
+            }
+        </script>
     </head>
     <body>
         <div id="Wrapper">
@@ -24,12 +31,32 @@
             <section id="Milieu">
                 <div class="Boites" id="boite">
                     <div id="infos">
-                        <br>Salle :<br><br>
+                    <?php $IDL = $_GET["IDL"]; 
+
+                    include_once 'const.php';
+
+                    global $mysqlConnection;
+                    $memberStatement = $mysqlConnection->prepare("SELECT * FROM Labo WHERE ID_Labo = $IDL ;");
+                    $memberStatement->execute();
+                    $resultL = $memberStatement->fetchAll();
+                    
+                    echo('<br>Salle :<br><br>');
+                    echo($resultL[0]["Localisation"]);
+                    echo('<br><br><br>');
+                    echo('Téléphone<br><br>');
+                    echo($resultL[0]["Telephone"]);
+                    echo('<br><br><br>');
+                    echo('Email :<br><br>');
+                    echo($resultL[0]["Mail"]);
+                    echo('<br><br><br>');
+                    
+                    ?>
+                        <!-- <br>Salle :<br><br>
                         SC-101<br><br><br>
                         Téléphone<br><br>
                         +33 01 22 33 44 55<br><br><br>
                         Email :<br><br>
-                        labo.biologie@omnessante.fr<br><br>
+                        labo.biologie@omnessante.fr<br><br> -->
                     </div>
                     <div id="Services">
                         <div class="container">
@@ -41,7 +68,7 @@
                                 <div class="collapse" id="collapseExample" style="text-align:center; margin-left: auto; margin-right: auto;">
                                     <?php foreach($result as $res):?>
                                         <div class="card card-body" style="background-color:#266b6b; text-align:justify; margin-left: auto; margin-right: auto;">
-                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#covidM"style="background-color:transparent;">
+                                            <button type="button"  onclick=reserverS(<?php echo($res["ID_Service"]);?>,<?php echo($resultL[0]["ID_Labo"]);?>)  class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#covidM"style="background-color:transparent;">
                                                 <?php echo($res["Nom"]);?>
                                             </button>
                                             <div class="modal fade" id="covidM" tabindex="-1" aria-labelledby="covid" aria-hidden="true">
@@ -75,6 +102,15 @@
                         </div>
                     </div>
                 </div>
+                <div class="Boites" id="boite" style="margin-top : 10px;">
+                    <button class="btn btn-primary" onclick="location.href='laboratoire.php?IDL=1'" style="height:35px; width:300px; margin-left:auto; margin-right:auto; background-color:#013d42;">
+                        Labo1
+                    </button>
+                    <button class="btn btn-primary" onclick="location.href='laboratoire.php?IDL=2'" style="height:35px; width:300px; margin-left:auto; margin-right:auto; background-color:#013d42;">
+                        Labo2
+                    </button>
+                </div>
+
             </section>
         </div>
         <?php include 'footer.php' ?>

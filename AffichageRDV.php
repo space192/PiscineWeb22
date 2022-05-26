@@ -104,7 +104,7 @@
                     echo ('</div>');
 
 
-                    echo ('<button id="annuler" onClick="effacer()" data-arg1="');
+                    echo ('<button id="annuler" onClick="effacer()" title="Annuler votre rendez-vous" data-arg1="');
                     echo($RDV["Date"]);
                     echo('" data-arg2="');
                     echo($RDV["ID_Client"]);

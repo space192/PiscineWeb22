@@ -17,16 +17,17 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="Index.js"></script>
     <script>    
-        function reserver() {
+        function reserver(ids,idl) {
                 
-            
-                location.href = "reserver.php";
+                location.href = "reserverS.php";
                 let date = event.target.getAttribute('data-arg1');
                 let heure = event.target.getAttribute('data-arg2');
                 document.cookie = "Heure=" + heure + "; SameSite=None; Secure";
                 document.cookie = "Date=" + date + "; SameSite=None; Secure";
-                alert("Rendez-vous le " + date + " à " + heure + " confirmé!");    
-                       
+                document.cookie = "IDL=" + idl + "; SameSite=None; Secure";
+                document.cookie = "IDS=" + ids + "; SameSite=None; Secure";
+                alert("Rendez-vous le " + date + " à " + heure + " confirmé!" + ids + idl);    
+            
         }
     </script>
 </head>
@@ -45,13 +46,12 @@
         </thead>
         <tbody>
             <?php
-                $datatest =  $_COOKIE["test1"];
-                $id = substr($datatest,13);
-                $data = substr($datatest,1,12);
                 
                 
+                $idS = $_GET["IDS"];
+                $idL = $_GET["IDL"];
                 
-                $memberStatement = $mysqlConnection->prepare("SELECT * FROM EDT_Medecin WHERE ID_Medecin = $id ;");
+                $memberStatement = $mysqlConnection->prepare("SELECT * FROM EDT_Labo WHERE ID_Labo = $idL AND ID_Service = $idS ;");
                 $memberStatement->execute();
                 $result = $memberStatement->fetchAll();
                 $listeRDV = []; ;
@@ -59,6 +59,7 @@
                 {
                     array_push($listeRDV,$elem["Date"]);
                 }
+                
                 echo('<tr>');
                 for ($i = 1; $i <= 8; $i++) {
                     echo('<td style="width:12.5%;" >' . date("l", mktime(0, 0, 0, date("m")  , date("d")+$i-1, date("Y"))) . '</td>');
@@ -82,48 +83,9 @@
                         }
                         else
                         {
-                            if($date<$dateR)
-                            {
-                                if($jourN=='7')
-                                {
-                                    echo('<td ><button id="cellButtonN">' .  date_format($date, ' H:i') . '</button></td>');
-                                }
-                                else
-                                {
-                                    if($data[($jourN-1)*2] == '1')
-                                        {
-                                            echo('<td ><button id="cellButton" onClick="reserver()" data-arg1=').$dateT->format('Y-m-d ').(' data-arg2=').$date->format(' H:i:s').(' >' .  date_format($date, ' H:i') . '</button></td>');
-                                        }
-                                        else
-                                        {
-                                            echo('<td ><button id="cellButtonN">' .  date_format($date, ' H:i') . '</button></td>');
-                                        }
-                                }
-                                
-                            }
-                            else
-                            {
-
-                                if($jourN=='7')
-                                {
-                                    echo('<td ><button id="cellButtonN">' .  date_format($date, ' H:i') . '</button></td>');
-                                }
-                                else
-                                {
-                                    if($data[($jourN-1)*2+1] == '1')
-                                        {
-                                            echo('<td ><button id="cellButton" onClick="reserver()" data-arg1=').$dateT->format('Y-m-d ').(' data-arg2=').$date->format(' H:i:s').(' >' .  date_format($date, ' H:i') . '</button></td>');
-                                        }
-                                        else
-                                        {
-                                            echo('<td ><button id="cellButtonN">' .  date_format($date, ' H:i') . '</button></td>');
-                                        }
-                                }
-                            }    
+                            echo('<td ><button id="cellButton" onClick="reserver('. $idS . ','.  $idL  .')" data-arg1=').$dateT->format('Y-m-d ').(' data-arg2=').$date->format(' H:i:s').(' >' .  date_format($date, ' H:i') . '</button></td>');
+                                            
                         }
-                        
-                        
-
                         $dateT->modify('+1 day');
                     }
                     echo('</tr>');
