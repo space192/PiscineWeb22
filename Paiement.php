@@ -36,7 +36,7 @@
                                         <div class="inputbox"> <input type="text" name="name" min="1" max="999" class="form-control" required="required"> <span>CVV</span> </div>
                                     </div>
                                     <div class="px-5 pay">
-                                        <button class="btn btn-success btn-block">Payer</button>
+                                        <button class="btn btn-success btn-block" onclick="location.href='reserver.php'">Payer</button>
                                     </div>
                                 </div>
                             </div>

@@ -19,14 +19,15 @@
     <script>    
         function reserver(ids,idl) {
                 
-                location.href = "reserverS.php";
+                //location.href = "reserverS.php";
                 let date = event.target.getAttribute('data-arg1');
                 let heure = event.target.getAttribute('data-arg2');
                 document.cookie = "Heure=" + heure + "; SameSite=None; Secure";
                 document.cookie = "Date=" + date + "; SameSite=None; Secure";
                 document.cookie = "IDL=" + idl + "; SameSite=None; Secure";
                 document.cookie = "IDS=" + ids + "; SameSite=None; Secure";
-                alert("Rendez-vous le " + date + " à " + heure + " confirmé!" + ids + idl);    
+                document.cookie = "RDV=" + '2' + "; SameSite=None; Secure";
+                alert("Rendez-vous le " + date + " à " + heure + " sélectionné!" );    
             
         }
     </script>
@@ -50,8 +51,9 @@
                 
                 $idS = $_GET["IDS"];
                 $idL = $_GET["IDL"];
-                
-                $memberStatement = $mysqlConnection->prepare("SELECT * FROM EDT_Labo WHERE ID_Labo = $idL AND ID_Service = $idS ;");
+
+
+                $memberStatement = $mysqlConnection->prepare("SELECT * FROM EDT_Labo WHERE (ID_Labo ='" .$idL ."') AND (ID_Service = '".$idS."') ;");
                 $memberStatement->execute();
                 $result = $memberStatement->fetchAll();
                 $listeRDV = []; ;
@@ -94,7 +96,11 @@
             
         </tbody>
     </table>
-            </div>
+    <div id="boutonPayer">
+        <?php include_once 'paiement.php' ?>
+    </div>
+    
+    
 
 
 </body>

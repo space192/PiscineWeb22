@@ -19,13 +19,26 @@
     <script>    
         function reserver() {
                 
-            
-                location.href = "reserver.php";
+                //location.href = "Paiement.php";
+                //location.href = "reserver.php";
                 let date = event.target.getAttribute('data-arg1');
                 let heure = event.target.getAttribute('data-arg2');
                 document.cookie = "Heure=" + heure + "; SameSite=None; Secure";
                 document.cookie = "Date=" + date + "; SameSite=None; Secure";
-                alert("Rendez-vous le " + date + " à " + heure + " confirmé!");    
+                document.cookie = "RDV=" + '1' + "; SameSite=None; Secure";
+                alert("Rendez-vous le " + date + " à " + heure + " selectionné!");    
+                       
+        }
+
+        function payer() {
+                
+                location.href = "Paiement.php";
+                //location.href = "reserver.php";
+                // let date = event.target.getAttribute('data-arg1');
+                // let heure = event.target.getAttribute('data-arg2');
+                // document.cookie = "Heure=" + heure + "; SameSite=None; Secure";
+                // document.cookie = "Date=" + date + "; SameSite=None; Secure";
+                // alert("Rendez-vous le " + date + " à " + heure + " selectionné!");    
                        
         }
     </script>
@@ -132,8 +145,10 @@
             
         </tbody>
     </table>
-            </div>
-
+    <div id="boutonPayer">
+        <?php include_once 'paiement.php' ?>
+    </div>
+    
 
 </body>
 
