@@ -17,16 +17,20 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript">
-        function effacer() {
+        function effacer(t) {
 
-            if(confirm("Voullez vous annulez ce rendez-vous?"))
-            {
-                let date = event.target.getAttribute('data-arg1');
-                document.cookie = "DateEff=" + date+ "; SameSite=None; Secure";
-                let client = event.target.getAttribute('data-arg2');
-                document.cookie = "ClientEff=" + client + "; SameSite=None; Secure";
-                location.href = "EffacerRDV.php";
-            }
+            
+                if(confirm("Voullez vous annulez ce rendez-vous?"))
+                {
+                    let date = event.target.getAttribute('data-arg1');
+                    document.cookie = "DateEff=" + date+ "; SameSite=None; Secure";
+                    let client = event.target.getAttribute('data-arg2');
+                    document.cookie = "ClientEff=" + client + "; SameSite=None; Secure";
+                    document.cookie = "RDV=" + t + "; SameSite=None; Secure";
+                    location.href = "EffacerRDV.php";
+                }
+            
+            
             
         }
 
@@ -107,7 +111,7 @@
                     echo ('</div>');
 
 
-                    echo ('<button id="annuler" onClick="effacer()" title="Annuler votre rendez-vous" data-arg1="');
+                    echo ('<button id="annuler" onClick="effacer(1)" title="Annuler votre rendez-vous" data-arg1="');
                     echo($RDV["Date"]);
                     echo('" data-arg2="');
                     echo($RDV["ID_Client"]);
@@ -194,7 +198,7 @@
                     echo ('</div>');
 
 
-                    echo ('<button id="annuler" onClick="effacer()" title="Annuler votre rendez-vous" data-arg1="');
+                    echo ('<button id="annuler" onClick="effacer(2)" title="Annuler votre rendez-vous" data-arg1="');
                     echo($RDV["Date"]);
                     echo('" data-arg2="');
                     echo($RDV["ID_Client"]);
