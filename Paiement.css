@@ -1,6 +1,6 @@
 #BoutonPayer
 {
-    border-radius: 0 8px 8px 0;
+    border-radius: 8px;
     height: 60px;
     padding: 16px;
     z-index: 1;
@@ -8,6 +8,10 @@
     cursor: pointer;
     border: solid var(--eceText);
     color: var(--eceText);
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
 }
 
 #BoutonPayer:hover
