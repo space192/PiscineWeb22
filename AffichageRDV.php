@@ -108,6 +108,15 @@
                     echo ('</div>');
                     echo ('</div>');
 
+                    echo ('<div id="textDetails">');
+                    echo('<div id="titreD">');
+                    echo('Localisation :');
+                    echo ('</div>');
+                    echo('<div id="descriptionD">');
+                    echo($data[0]["Localisation"]);
+                    echo ('</div>');
+                    echo ('</div>');
+
                     echo ('</div>');
 
 
