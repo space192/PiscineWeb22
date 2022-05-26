@@ -15,6 +15,7 @@
     <link rel="icon" href="images/Decor/LogoOmnesSante2.ico">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/c6c9e611bb.js" crossorigin="anonymous"></script>
     <script src="Index.js"></script>
     <script>    
         function reserver(ids,idl) {
@@ -39,66 +40,70 @@
         <?php include 'NavBarStatique.php' ?>
         <div id="Darkmode"><button onclick="switchTheme()" title="Changer de thème de couleur">◐</button></div>
     </header>
-    <table id="tableRDV">
-        <thead>
-            <tr>
-                <th colspan="8">Disponibilitées  </th> 
-            </tr>
-        </thead>
-        <tbody>
-            <?php
-                
-                
-                $idS = $_GET["IDS"];
-                $idL = $_GET["IDL"];
+    <section id="Milieu">
+        <table id="tableRDV">
+            <thead>
+                <tr>
+                    <th colspan="8">Disponibilitées  </th> 
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                    
+                    
+                    $idS = $_GET["IDS"];
+                    $idL = $_GET["IDL"];
 
 
-                $memberStatement = $mysqlConnection->prepare("SELECT * FROM EDT_Labo WHERE (ID_Labo ='" .$idL ."') AND (ID_Service = '".$idS."') ;");
-                $memberStatement->execute();
-                $result = $memberStatement->fetchAll();
-                $listeRDV = []; ;
-                foreach ($result as $elem) 
-                {
-                    array_push($listeRDV,$elem["Date"]);
-                }
-                
-                echo('<tr>');
-                for ($i = 1; $i <= 8; $i++) {
-                    echo('<td style="width:12.5%;" >' . date("l", mktime(0, 0, 0, date("m")  , date("d")+$i-1, date("Y"))) . '</td>');
-                }
-                echo('</tr>');
-                $date = date_create(date('Y-m-d H:i:s'));
-                date_time_set($date, 9, 00);
-                $dateR = date_create(date('Y-m-d H:i:s'));
-                date_time_set($dateR, 13, 30);
-                for ($j = 1; $j <= 17; $j++) {
-                    date_time_set($date, 9, 00 + $j*30);
+                    $memberStatement = $mysqlConnection->prepare("SELECT * FROM EDT_Labo WHERE (ID_Labo ='" .$idL ."') AND (ID_Service = '".$idS."') ;");
+                    $memberStatement->execute();
+                    $result = $memberStatement->fetchAll();
+                    $listeRDV = []; ;
+                    foreach ($result as $elem) 
+                    {
+                        array_push($listeRDV,$elem["Date"]);
+                    }
+                    
                     echo('<tr>');
-                    $dateT = date_create(date('Y-m-d H:i:s'));
                     for ($i = 1; $i <= 8; $i++) {
-                        
-                        $jourN = date("N", mktime(0, 0, 0, date("m")  , date("d")+$i-1, date("Y"))) ;
-                        // echo ($dateT->format('Y-m-d ') .' '. $date->format(' H:i:s'));  
-                        if(in_array($dateT->format('Y-m-d') .' '. $date->format('H:i:s'),$listeRDV))
-                        {
-                            echo('<td ><button id="cellButtonN">' .  date_format($date, ' H:i') . '</button></td>');
-                        }
-                        else
-                        {
-                            echo('<td ><button id="cellButton" onClick="reserver('. $idS . ','.  $idL  .')" data-arg1=').$dateT->format('Y-m-d ').(' data-arg2=').$date->format(' H:i:s').(' >' .  date_format($date, ' H:i') . '</button></td>');
-                                            
-                        }
-                        $dateT->modify('+1 day');
+                        echo('<td style="width:12.5%;" >' . date("l", mktime(0, 0, 0, date("m")  , date("d")+$i-1, date("Y"))) . '</td>');
                     }
                     echo('</tr>');
-                }
-            ?>
-            
-        </tbody>
-    </table>
-    <div id="boutonPayer">
-        <?php include_once 'paiement.php' ?>
-    </div>
+                    $date = date_create(date('Y-m-d H:i:s'));
+                    date_time_set($date, 9, 00);
+                    $dateR = date_create(date('Y-m-d H:i:s'));
+                    date_time_set($dateR, 13, 30);
+                    for ($j = 1; $j <= 17; $j++) {
+                        date_time_set($date, 9, 00 + $j*30);
+                        echo('<tr>');
+                        $dateT = date_create(date('Y-m-d H:i:s'));
+                        for ($i = 1; $i <= 8; $i++) {
+                            
+                            $jourN = date("N", mktime(0, 0, 0, date("m")  , date("d")+$i-1, date("Y"))) ;
+                            // echo ($dateT->format('Y-m-d ') .' '. $date->format(' H:i:s'));  
+                            if(in_array($dateT->format('Y-m-d') .' '. $date->format('H:i:s'),$listeRDV))
+                            {
+                                echo('<td ><button id="cellButtonN">' .  date_format($date, ' H:i') . '</button></td>');
+                            }
+                            else
+                            {
+                                echo('<td ><button id="cellButton" onClick="reserver('. $idS . ','.  $idL  .')" data-arg1=').$dateT->format('Y-m-d ').(' data-arg2=').$date->format(' H:i:s').(' >' .  date_format($date, ' H:i') . '</button></td>');
+                                                
+                            }
+                            $dateT->modify('+1 day');
+                        }
+                        echo('</tr>');
+                    }
+                ?>
+                
+            </tbody>
+        </table>
+        <br>
+        <div id="boutonPayer">
+            <?php include_once 'paiement.php' ?>
+        </div>
+    </section>
+    
     
     
 

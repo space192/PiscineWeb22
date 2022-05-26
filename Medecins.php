@@ -26,7 +26,9 @@
             <?php include 'NavBarStatique.php' ?>
             <div id="Darkmode"><button onclick="switchTheme()" title="Changer de thème de couleur">◐</button></div>
         </header>
+        <section id="Milieu">
         <?php include 'generaliste_copy.php' ?>
+        </section>
     </div>
 </body>
 
