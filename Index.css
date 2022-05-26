@@ -265,10 +265,80 @@ body
     font-size: large;
 }
 
-#Footer
+footer
 {
     background-color: var(--ece2);
     color: white;
+    display: flex;
     text-align: center;
     padding: 5px;
+    clear: both;
+    margin: auto;
+    width: 100%;
+    -moz-box-shadow: 0 -5px 6px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 -5px 6px rgba(0,0,0,0.5);
+    box-shadow: 0 -5px 6px rgba(0,0,0,0.5);
+}
+
+#FooterCentre
+{
+    margin: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    z-index: 100;
+    clear: both;
+}
+
+#Gmaps
+{
+    background-color: var(--ece);
+    color: white;
+    padding: 15px;
+    text-align: center;
+    margin-right: 20px;
+    margin-left: auto;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    float: right;
+}
+
+#Transports
+{
+    position: relative;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    clear: both;
+    width: 260px;
+}
+
+footer img
+{
+    padding: 15px;
+    margin-left: 20px;
+    margin-right: auto;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    float: left;
+    text-align: left;
+    width: 20%;
+    height: 20%;
+}
+
+footer a
+{
+    color: #339191;
 }

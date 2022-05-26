@@ -44,8 +44,7 @@ else
 {
     die;
 }
-echo("</p></div> </section> </div> </body> </html>")
-
-
-///tu peux faire le front ici pour l'affichage des recherches on aura les variables du dessus pour afficher les résultats
+echo("</p></div> </section> </div>");
+include 'footer.php';
+echo(" </body> </html>");
 ?>

@@ -40,6 +40,7 @@
             <?php include 'specialiste copy.php' ?>
         </section>
     </div>
+    <?php include 'footer.php' ?>
 </body>
 
 </html>

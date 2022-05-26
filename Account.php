@@ -48,6 +48,7 @@
             <?php endif; ?>
         </section>
     </div>
+    <?php include 'footer.php' ?>
     <script src="Index.js"></script>
 </body>
 

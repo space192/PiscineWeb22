@@ -145,6 +145,7 @@
         <?php include_once 'paiement.php' ?>
     </div>
     </section>
+    <?php include 'footer.php' ?>
 
 </body>
 

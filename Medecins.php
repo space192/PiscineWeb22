@@ -30,6 +30,7 @@
         <?php include 'generaliste_copy.php' ?>
         </section>
     </div>
+    <?php include 'footer.php' ?>
 </body>
 
 </html>
