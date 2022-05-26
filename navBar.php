@@ -10,7 +10,7 @@
                 <div id="Options" class="contenu">
                     <a href='Medecins.php'>Médecin généraliste</a>
                     <a href="MedecinsS.php">Médecin spécialiste</a>
-                    <a href="laboratoire.php">Laboratoire</a>
+                    <a href="laboratoire.php?IDL=1">Laboratoire</a>
                 </div>
             </div>
             
