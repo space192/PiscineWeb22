@@ -28,7 +28,7 @@ function card($elem)
     echo ($elem["Localisation"]);
     echo ('<br>');
     echo ('Téléphone : ');
-    echo ($elem["Telephone"]);
+    echo ("0" . $elem["Telephone"]);
     echo ('<br>');
     echo ('Mail : ');
     echo ($elem["Mail"]);
