@@ -230,9 +230,9 @@
     </div>
     <br>
     <div class="SousBoites" id="Deco">
-        <h3>Se déconecter</h3>
+        <h3>Se déconnecter</h3>
         <form method="post" action="disconnect.php">
-            <button class="btn btn-danger">Se déconecter</button>
+            <button class="btn btn-danger">Se déconnecter</button>
         </form>
     </div>
 </div>
