@@ -145,6 +145,7 @@
             
         </tbody>
     </table>
+    <br>
     <div id="boutonPayer">
         <?php include_once 'paiement.php' ?>
     </div>

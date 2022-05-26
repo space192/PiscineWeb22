@@ -45,19 +45,36 @@
                             <div class="px-5 mt-5" style="text-align: center;">
                                 <div class="text-center"> <h5>Paypal</h5> </div>
                                 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                                    <input type="hidden" name="cmd" value="_s-xclick">
-                                    <input type="hidden" name="hosted_button_id" value="FB67VDTHFLDPJ">
-                                    <table>
+                                    <input type="hidden" name="cmd" value="_xclick">
+                                    <input type="hidden" name="business" value="blair.adrien@outlook.com">
+                                    <input type="hidden" name="lc" value="FR">
+                                    <input type="hidden" name="item_name" value="Projet Web">
+                                    <input type="hidden" name="button_subtype" value="services">
+                                    <input type="hidden" name="no_note" value="1">
+                                    <input type="hidden" name="no_shipping" value="1">
+                                    <input type="hidden" name="rm" value="1">
+                                    <input type="hidden" name="return" value="http://localhost/piscineweb22/AffichageRDV.php">
+                                    <input type="hidden" name="cancel_return" value="http://localhost/piscineweb22/index.php">
+                                    <input type="hidden" name="currency_code" value="EUR">
+                                    <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHosted">
+                                <table>
                                     <tr><td><input type="hidden" name="on0" value="Prestation">Prestation</td></tr><tr><td><select name="os0">
-                                        <option value="Consultation">Consultation €27,00 EUR</option>
+                                        <option value="Consultation">Consultation €20,00 EUR</option>
                                         <option value="Test en laboratoire">Test en laboratoire €42,00 EUR</option>
                                         <option value="M. Hina">M. Hina €0,01 EUR</option>
                                     </select> </td></tr>
-                                    </table>
-                                    <input type="hidden" name="currency_code" value="EUR"><br>
-                                    <input type="image" src="https://www.paypalobjects.com/fr_FR/FR/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" alt="PayPal, le réflexe sécurité pour payer en ligne"><br>
+                                </table>
+                                    <input type="hidden" name="option_select0" value="Consultation">
+                                    <input type="hidden" name="option_amount0" value="20.00">
+                                    <input type="hidden" name="option_select1" value="Test en laboratoire">
+                                    <input type="hidden" name="option_amount1" value="42.00">
+                                    <input type="hidden" name="option_select2" value="M. Hina">
+                                    <input type="hidden" name="option_amount2" value="0.01">
+                                    <input type="hidden" name="option_index" value="0">
+                                    <input type="image" src="https://www.paypalobjects.com/fr_FR/FR/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal, le réflexe sécurité pour payer en ligne">
                                     <img alt="" border="0" src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
                                 </form>
+
                             </div>
                         </div>
                     </div>
