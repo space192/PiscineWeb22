@@ -22,7 +22,7 @@ foreach($spe as $specialite)
     if($temp == true)
     {
         echo ('<div id="deroulantSpe">');
-        echo ('<div id="titreSpe">');
+        echo ('<div class="titreSpe">');
         echo($specialite["Nom_spe"]);
         echo ('</div>');
         foreach ($result as $elem) {

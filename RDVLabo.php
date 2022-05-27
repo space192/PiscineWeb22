@@ -83,11 +83,11 @@
                             // echo ($dateT->format('Y-m-d ') .' '. $date->format(' H:i:s'));  
                             if(in_array($dateT->format('Y-m-d') .' '. $date->format('H:i:s'),$listeRDV))
                             {
-                                echo('<td ><button id="cellButtonN">' .  date_format($date, ' H:i') . '</button></td>');
+                                echo('<td ><button class="cellButtonN">' .  date_format($date, ' H:i') . '</button></td>');
                             }
                             else
                             {
-                                echo('<td ><button id="cellButton" onClick="reserver('. $idS . ','.  $idL  .')" data-arg1=').$dateT->format('Y-m-d ').(' data-arg2=').$date->format(' H:i:s').(' >' .  date_format($date, ' H:i') . '</button></td>');
+                                echo('<td ><button class="cellButton" onClick="reserver('. $idS . ','.  $idL  .')" data-arg1=').$dateT->format('Y-m-d ').(' data-arg2=').$date->format(' H:i:s').(' >' .  date_format($date, ' H:i') . '</button></td>');
                                                 
                             }
                             $dateT->modify('+1 day');

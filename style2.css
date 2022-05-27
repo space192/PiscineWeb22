@@ -16,7 +16,7 @@
   background-color: var(--fond1);
 }
 
-#titreSpe{
+.titreSpe{
   box-shadow: 0 8px 16px -8px rgba(0,0,0,0.4);
   margin-top: 30px;
   margin-bottom: 30px;
@@ -71,12 +71,11 @@
   transition: height 0.4s;
 }
 
-#general {
+.general {
   width: 70%;
   height: 100%;
   transition: width 0.4s;
   background-color: var(--fond2);
-  float : right;
   
   /* position: absolute; */
    
@@ -86,22 +85,21 @@
   padding-top: 0; */
 }
 
-#options {
+.options {
   width: 30%;
   height: 100%;
   background: linear-gradient(#013d42, #266b6b);
   transition: width 0.4s;
-  float:left;
   overflow: hidden;
   z-index: 2;
   transition: width 0.4s;
 }
 
-#card:hover #options {
+#card:hover .options {
   width: 100%;
 }
 
-#card:hover #general {
+#card:hover .general {
   width: 0%;
 }
 
@@ -114,12 +112,14 @@
   box-shadow: 0 8px 16px -8px rgba(0,0,0,0.4);
   border-radius: 6px;
   overflow: hidden; 
+  display: flex;
+  flex-direction: row;
   /* position: relative; */
   margin: 50px;
   border-radius: 10px;
 }
 
-#profil
+.profil
 {
   width: 100%;
   height: 100%;
@@ -128,7 +128,7 @@
   transition: width 0.4s;
 }
 
-#details
+.details
 {
   color: #fff;
   transition: width 0.4s;
@@ -137,27 +137,27 @@
   height: 100%;
 }
 
-#card:hover #details {
+#card:hover .details {
   width: 70%;
   border-radius: 0 5px 5px 0;
 }
 
-#card:hover #general {
+#card:hover .general {
   visibility: hidden;
 }
 
-#card:hover #profil {
+#card:hover .profil {
   width: 30%;
   border-radius: 0 5px 5px 0;
 }
 
-#information-contact {
+.information-contact {
   color: var(--ece);
   font-size: 15px;
   margin: 10px;
 }
 
-#button{
+.button{
   background-color: var(--fond1);
   border: none;
   color: var(--ece);
@@ -171,7 +171,7 @@
 
 
 
-#tableDispo{
+.tableDispo{
   background-color: var(--ece);
   color:white;
   margin: auto;
@@ -194,7 +194,7 @@
   
 }
 
-#titre{
+.titre{
   color: white;
   font-weight: bold;
   background: rgba(0,0,0,0.15);
@@ -206,13 +206,13 @@
   font-size: 16px!important;
 }
 
-#cell
+.cell
 {
   margin:30px;
   border: 2px solid white;
 }
 
-#cellButton
+.cellButton
 {
   background-color: white;
   border: none;
@@ -224,7 +224,7 @@
   border-radius: 5px;
 }
 
-#cellButtonN
+.cellButtonN
 {
   background-color: rgb(240, 146, 146);
   border: none;
@@ -237,15 +237,15 @@
 }
 
 
-#nonDispo{
+.nonDispo{
   background: linear-gradient(#440505, rgb(226, 29, 29));
 }
 
-#dispo{
+.dispo{
   background: linear-gradient(#05570c, rgb(48, 247, 17));
 }
 
-#photo{
+.photo{
   border-radius: 5px;
   width: 80%;
   height: 80%;
@@ -254,7 +254,7 @@
   overflow: hidden;
 }
 
-#image
+.image
 {
   max-height: 100%;
   overflow: hidden;

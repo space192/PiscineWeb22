@@ -3,28 +3,28 @@ function card($elem)
 {
     $id = $elem["ID"];
     echo ('<div id="card">
-        <div id="options">
-        <div id="profil">
-        <div id="titre" >');
+        <div class="options">
+        <div class="profil">
+        <div class="titre" >');
     echo ($elem["Prenom"] . " " . $elem["Nom"]);
     echo ('</div>');
 
-    echo ('<div id="photo">');
-    echo ('<img src="' . $elem["pp"] . '" id="image">');
+    echo ('<div class="photo">');
+    echo ('<img src="' . $elem["pp"] . '" class="image">');
     echo ('</div> ');
     
-    echo('</div><div id="details">');
+    echo('</div><div class="details">');
     if (isset($_SESSION["LOGGED"]) || isset($_COOKIE["LOGGED_USER"]))
     {
-        echo('<button id="button"  onclick="showContact(' . $elem["dispo"] . $id . ')">Prendre un rendez vous </button>');
-        echo('<button id="button" type="button" data-toggle="modal" data-target="#staticBackdrop'.$id .'">Communiquez avec le médecin</button>');
+        echo('<button class="button"  onclick="showContact(' . $elem["dispo"] . $id . ')">Prendre un rendez vous </button>');
+        echo('<button class="button" type="button" data-toggle="modal" data-target="#staticBackdrop'.$id .'">Communiquez avec le médecin</button>');
         include 'chat.php';
     }
     
     
-    echo ('<button id="button"' . 'onclick="location.href=' . "'CV.php?ID=" . $id . "'" . '"' . '>Voir son CV</button>
-            </div> </div><div id="general">
-            <div id="information-contact">');
+    echo ('<button class="button"' . 'onclick="location.href=' . "'CV.php?ID=" . $id . "'" . '"' . '>Voir son CV</button>
+            </div> </div><div class="general">
+            <div class="information-contact">');
 
     echo ('Localisation : ');
     echo ($elem["Localisation"]);
@@ -36,7 +36,7 @@ function card($elem)
     echo ($elem["Mail"]);
     echo ('<br>');
 
-    echo ('</div><table id="tableDispo"><thead><tr><th colspan="7">Disponibilitées</th></tr></thead>
+    echo ('</div><table class="tableDispo"><thead><tr><th colspan="7">Disponibilitées</th></tr></thead>
          <tbody>
              <tr>
                 <td colspan=""></td>
@@ -50,17 +50,17 @@ function card($elem)
              <tr><td>Matin</td>');
     for ($i = 0; $i < 6; $i++) {
         if (substr($elem["dispo"], $i * 2, 1) == '1') {
-            echo ('<td id="dispo">O</td> ');
+            echo ('<td class="dispo">O</td> ');
         } else {
-            echo ('<td id="nonDispo">N</td> ');
+            echo ('<td class="nonDispo">N</td> ');
         }
     }
     echo ('  </tr><tr><td>Après-Midi</td>');
     for ($i = 0; $i < 6; $i++) {
         if (substr($elem["dispo"], $i * 2 + 1, 1) == '1') {
-            echo ('<td id="dispo">O</td> ');
+            echo ('<td class="dispo">O</td> ');
         } else {
-            echo ('<td id="nonDispo">N</td> ');
+            echo ('<td class="nonDispo">N</td> ');
         }
     }
     echo ('</tr></tbody></table></div></div>

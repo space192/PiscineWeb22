@@ -65,7 +65,7 @@
             echo ('<div id="contenant">');
             
             echo ('<div id="deroulant">');
-            echo ('<div id="titreSpe"> Mes rendez-vous avec des practiciens:');
+            echo ('<div class="titreSpe"> Mes rendez-vous avec des practiciens:');
             echo('</div>');
             foreach($result as $RDV)
             {
@@ -77,43 +77,43 @@
                     $data = $memberStatement->fetchAll();
                     echo ('<div id="cardRDV">');
 
-                   // echo ('<div id="detailsRDV">');
-                    echo ('<div id="detailsProfil">');
-                    echo('<div id="titre">');
+                   // echo ('<div class="detailsRDV">');
+                    echo ('<div class="detailsProfil">');
+                    echo('<div class="titre">');
                     echo('Votre practicien : <br>');
                     echo($data[0]["Nom"] . $data[0]["Prenom"]);
                     echo ('</div>');
-                    echo ('<div id="photoProfil">');
-                    echo ('<img src="' . $data[0]["pp"] . '" id="image">');
+                    echo ('<div class="photoProfil">');
+                    echo ('<img src="' . $data[0]["pp"] . '" class="image">');
                     echo ('</div> ');
                     echo ('</div> ');
                    // echo ('</div>');
 
 
-                    echo ('<div id="detailsRDV">');
-                    echo ('<div id="textDetails">');
-                    echo('<div id="titreD">');
+                    echo ('<div class="detailsRDV">');
+                    echo ('<div class="textDetails">');
+                    echo('<div class="titreD">');
                     echo('Date :');
                     echo ('</div>');
-                    echo('<div id="descriptionD">');
+                    echo('<div class="descriptionD">');
                     echo(substr($RDV["Date"],0,10));
                     echo ('</div>');
                     echo ('</div>');
 
-                    echo ('<div id="textDetails">');
-                    echo('<div id="titreD">');
+                    echo ('<div class="textDetails">');
+                    echo('<div class="titreD">');
                     echo('Heure :');
                     echo ('</div>');
-                    echo('<div id="descriptionD">');
+                    echo('<div class="descriptionD">');
                     echo(substr($RDV["Date"],10));
                     echo ('</div>');
                     echo ('</div>');
 
-                    echo ('<div id="textDetails">');
-                    echo('<div id="titreD">');
+                    echo ('<div class="textDetails">');
+                    echo('<div class="titreD">');
                     echo('Localisation :');
                     echo ('</div>');
-                    echo('<div id="descriptionD">');
+                    echo('<div class="descriptionD">');
                     echo($data[0]["Localisation"]);
                     echo ('</div>');
                     echo ('</div>');
@@ -121,7 +121,7 @@
                     echo ('</div>');
 
 
-                    echo ('<button id="annuler" onClick="effacer(1)" title="Annuler votre rendez-vous" data-arg1="');
+                    echo ('<button class="annuler" onClick="effacer(1)" title="Annuler votre rendez-vous" data-arg1="');
                     echo($RDV["Date"]);
                     echo('" data-arg2="');
                     echo($RDV["ID_Client"]);
@@ -132,7 +132,7 @@
                 }
                 
             }
-            echo ('<div id="titreSpe"> Mes rendez-vous en laboratoire:');
+            echo ('<div class="titreSpe"> Mes rendez-vous en laboratoire:');
             echo('</div>');
 
             $memberStatement = $mysqlConnection->prepare("SELECT * FROM EDT_Labo ;");
@@ -159,8 +159,8 @@
                     echo ('<div id="cardRDV">');
 
                    // echo ('<div id="detailsRDV">');
-                    echo ('<div id="detailsProfil">');
-                    echo('<div id="titre">');
+                    echo ('<div class="detailsProfil">');
+                    echo('<div class="titre">');
                     echo($data[0]["Nom"]);
                     echo ('</div>');
                     
@@ -168,39 +168,39 @@
                    // echo ('</div>');
 
 
-                    echo ('<div id="detailsRDV">');
-                    echo ('<div id="textDetails">');
-                    echo('<div id="titreD">');
+                    echo ('<div class="detailsRDV">');
+                    echo ('<div class="textDetails">');
+                    echo('<div class="titreD">');
                     echo('Date :');
                     echo ('</div>');
-                    echo('<div id="descriptionD">');
+                    echo('<div class="descriptionD">');
                     echo(substr($RDV["Date"],0,10));
                     echo ('</div>');
                     echo ('</div>');
 
-                    echo ('<div id="textDetails">');
-                    echo('<div id="titreD">');
+                    echo ('<div class="textDetails">');
+                    echo('<div class="titreD">');
                     echo('Heure :');
                     echo ('</div>');
-                    echo('<div id="descriptionD">');
+                    echo('<div class="descriptionD">');
                     echo(substr($RDV["Date"],10));
                     echo ('</div>');
                     echo ('</div>');
 
-                    echo ('<div id="textDetails">');
-                    echo('<div id="titreD">');
+                    echo ('<div class="textDetails">');
+                    echo('<div class="titreD">');
                     echo('Localisation :');
                     echo ('</div>');
-                    echo('<div id="descriptionD">');
+                    echo('<div class="descriptionD">');
                     echo($data[0]["Localisation"]);
                     echo ('</div>');
                     echo ('</div>');
 
-                    echo ('<div id="textDetails">');
-                    echo('<div id="titreD">');
+                    echo ('<div class="textDetails">');
+                    echo('<div class="titreD">');
                     echo('Service :');
                     echo ('</div>');
-                    echo('<div id="descriptionD">');
+                    echo('<div class="descriptionD">');
                     echo($service[0]["Nom"]);
                     echo ('</div>');
                     echo ('</div>');
@@ -208,7 +208,7 @@
                     echo ('</div>');
 
 
-                    echo ('<button id="annuler" onClick="effacer(2)" title="Annuler votre rendez-vous" data-arg1="');
+                    echo ('<button class="annuler" onClick="effacer(2)" title="Annuler votre rendez-vous" data-arg1="');
                     echo($RDV["Date"]);
                     echo('" data-arg2="');
                     echo($RDV["ID_Client"]);

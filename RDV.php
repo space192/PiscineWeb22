@@ -89,7 +89,7 @@
                             // echo ($dateT->format('Y-m-d ') .' '. $date->format(' H:i:s'));  
                             if(in_array($dateT->format('Y-m-d') .' '. $date->format('H:i:s'),$listeRDV))
                             {
-                                echo('<td ><button id="cellButtonN">' .  date_format($date, ' H:i') . '</button></td>');
+                                echo('<td ><button class="cellButtonN">' .  date_format($date, ' H:i') . '</button></td>');
                             }
                             else
                             {
@@ -97,17 +97,17 @@
                                 {
                                     if($jourN=='7')
                                     {
-                                        echo('<td ><button id="cellButtonN">' .  date_format($date, ' H:i') . '</button></td>');
+                                        echo('<td ><button class="cellButtonN">' .  date_format($date, ' H:i') . '</button></td>');
                                     }
                                     else
                                     {
                                         if($data[($jourN-1)*2] == '1')
                                             {
-                                                echo('<td ><button id="cellButton" onClick="reserver()" data-arg1=').$dateT->format('Y-m-d ').(' data-arg2=').$date->format(' H:i:s').(' >' .  date_format($date, ' H:i') . '</button></td>');
+                                                echo('<td ><button class="cellButton" onClick="reserver()" data-arg1=').$dateT->format('Y-m-d ').(' data-arg2=').$date->format(' H:i:s').(' >' .  date_format($date, ' H:i') . '</button></td>');
                                             }
                                             else
                                             {
-                                                echo('<td ><button id="cellButtonN">' .  date_format($date, ' H:i') . '</button></td>');
+                                                echo('<td ><button class="cellButtonN">' .  date_format($date, ' H:i') . '</button></td>');
                                             }
                                     }
 
@@ -117,17 +117,17 @@
 
                                     if($jourN=='7')
                                     {
-                                        echo('<td ><button id="cellButtonN">' .  date_format($date, ' H:i') . '</button></td>');
+                                        echo('<td ><button class="cellButtonN">' .  date_format($date, ' H:i') . '</button></td>');
                                     }
                                     else
                                     {
                                         if($data[($jourN-1)*2+1] == '1')
                                             {
-                                                echo('<td ><button id="cellButton" onClick="reserver()" data-arg1=').$dateT->format('Y-m-d ').(' data-arg2=').$date->format(' H:i:s').(' >' .  date_format($date, ' H:i') . '</button></td>');
+                                                echo('<td ><button class="cellButton" onClick="reserver()" data-arg1=').$dateT->format('Y-m-d ').(' data-arg2=').$date->format(' H:i:s').(' >' .  date_format($date, ' H:i') . '</button></td>');
                                             }
                                             else
                                             {
-                                                echo('<td ><button id="cellButtonN">' .  date_format($date, ' H:i') . '</button></td>');
+                                                echo('<td ><button class="cellButtonN">' .  date_format($date, ' H:i') . '</button></td>');
                                             }
                                     }
                                 }
