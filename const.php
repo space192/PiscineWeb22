@@ -2,7 +2,7 @@
 session_start();
 try
 {
-    $mysqlConnection = new PDO('mysql:host=fournierfamily.ovh;port=15621;dbname=OmnesSante;charset=utf8','jps','poojava',array(PDO::ATTR_PERSISTENT => TRUE));
+    $mysqlConnection = new PDO('mysql:host=localhost;port=3306;dbname=OmnesSante;charset=utf8','jps','poojava',array(PDO::ATTR_PERSISTENT => TRUE));
 }
 catch(Exception $e)
 {

@@ -4,7 +4,7 @@ if(isset($_POST["Prenom"]) && isset($_POST["Nom"]) && isset($_POST["Localisation
     $ext = pathinfo($_FILES["pp"]["name"])["extension"];
     if(in_array($ext,["png","jpg","jpeg"]))
     {
-        $tempFile = $_SERVER['DOCUMENT_ROOT'] . "/Code/PiscineWeb22/images/" . ($_POST["spe"] == 0 ? "Generalistes" : "Specialistes") . "/" .strtolower($_POST["Prenom"]) . " " . strtolower($_POST["Nom"]) . "." . $ext;
+        $tempFile = $_SERVER['DOCUMENT_ROOT'] . "PiscineWeb22/images/" . ($_POST["spe"] == 0 ? "Generalistes" : "Specialistes") . "/" .strtolower($_POST["Prenom"]) . " " . strtolower($_POST["Nom"]) . "." . $ext;
         move_uploaded_file($_FILES["pp"]["tmp_name"],$tempFile);
         include_once 'const.php';
         global $mysqlConnection;
