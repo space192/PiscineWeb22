@@ -4,7 +4,7 @@
 <script src="Admin.js"></script>
 <div class="Boites">
     <h2>Gestion des professionnels de santé</h2>
-    <div class="SousBoites">
+    <div class="SousBoites"> 
         <h3>Ajouter un professionnel de santé</h3>
         <form method="post" action="submitMedecin.php" enctype="multipart/form-data">
             <div class="input-group mb-3">

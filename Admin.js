@@ -3,7 +3,7 @@ let nbrDiplome = 1;
 
 function incrementDiplome()
 {
-    nbrDiplome++;
+    nbrDiplome++; 
 }
 function decrementDiplome()
 {

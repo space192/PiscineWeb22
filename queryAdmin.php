@@ -16,7 +16,7 @@ function getMed()
 }
 
 function supprM()
-{
+{ 
     global $mysqlConnection;
     $stmt= $mysqlConnection->prepare("DELETE FROM Medecin WHERE ID=?;");
     $stmt->execute([$_POST["ID"]]);

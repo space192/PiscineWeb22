@@ -25,7 +25,7 @@ if(isset($_POST["Prenom"]) && isset($_POST["Nom"]) && isset($_POST["Localisation
             $diplome->addChild("libelle",$_POST["libelle" . $i]);
             $diplome->addChild("annee",$_POST["annee" . $i]);
             $diplome->addChild("institution",$_POST["instit" . $i]);
-        }
+        } 
         $experiences = $cv->addChild("experiences");
         for($i = 1 ; $i <= $_POST["nbrExp"];$i++)
         {
