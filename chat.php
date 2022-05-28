@@ -92,7 +92,7 @@
                 }
             });
         }
-        $("#staticBackdrop").is(":visible")
+        $(<?php echo('"staticBackdrop' . (isset($_SESSION["Medecin"]) ? $res["ID"] :$id) .'"')?>).is(":visible")
         {
             setInterval(loadLog, 2500);
         }
