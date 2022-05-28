@@ -10,12 +10,7 @@ else if(isset($_SESSION["LOGGED"]))
 }
 $subject = "RDV confirmé le " . $_POST["date"] . " à " . $_POST["heure"];
 $message = "Votre rendez-vous est confirmé. En cas d'imprévu, pensez à le déplacer ou l'annuler le plus tôt possible.\nCordialement,\nL’équipe OMNES Santé";
-echo($to);
-echo("<br/>");
-echo($subject);
-echo("<br/>");
-echo($message);
-//mail($to,$subject,$message);
-//header('Location: reserver.php');
-//die;
+mail($to,$subject,$message);
+header('Location: reserver.php');
+die;
 ?>
