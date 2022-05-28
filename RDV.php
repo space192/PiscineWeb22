@@ -146,7 +146,7 @@
         </table>
         <br>
     <div id="boutonPayer">
-        <?php include_once 'Paiement.php' ?>
+        <?php include 'Paiement.php' ?>
     </div>
     </section>
     <?php include 'footer.php' ?>
