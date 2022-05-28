@@ -91,7 +91,6 @@
   background: linear-gradient(#013d42, #266b6b);
   transition: width 0.4s;
   overflow: hidden;
-  z-index: 2;
   transition: width 0.4s;
 }
 
