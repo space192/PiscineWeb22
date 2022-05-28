@@ -11,7 +11,7 @@ else if(isset($_SESSION["LOGGED"]))
 $subject = "RDV confirmé le " . $_POST["date"] . " à " . $_POST["heure"];
 $message = "Votre rendez-vous est confirmé. En cas d'imprévu, pensez à le déplacer ou l'annuler le plus tôt possible.\nCordialement,\nL’équipe OMNES Santé";
 mail($to,$subject,$message);
-if ($_POST["RDV"]==1)
+if ($_POST["RDV"]=='1')
     {
         include_once 'const.php';
         include 'queryAccount.php' ;
@@ -32,7 +32,7 @@ if ($_POST["RDV"]==1)
         header('Location: index.php');
         die();
     }
-    if ($_POST["RDV"]==2)
+    if ($_POST["RDV"]=='2')
     {
         include_once 'const.php';
         include 'queryAccount.php' ;
