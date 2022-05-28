@@ -28,6 +28,7 @@ if ($_COOKIE["RDV"]==1)
         $sql = "INSERT INTO EDT_Medecin (ID_Medecin, ID_Client,Date, Paiement,Autre_info_client) VALUES (?,?,?,?,?)";
         $stmt= $mysqlConnection->prepare($sql);
         $stmt->execute([$value1,$value2, $value3, $value4,$value5]);
+        echo("oui");
         header('Location: index.php');
         die();
     }
@@ -48,6 +49,7 @@ if ($_COOKIE["RDV"]==1)
         $sql = "INSERT INTO EDT_Labo (ID_Labo, ID_Client,ID_Service,Date) VALUES (?,?,?,?)";
         $stmt= $mysqlConnection->prepare($sql);
         $stmt->execute([$value1,$value2, $value3, $value4]);
+        echo("non");
         header('Location: index.php');
         die();
     }
