@@ -16,7 +16,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/c6c9e611bb.js" crossorigin="anonymous"></script>
-    <script src="Index.js"></script>
+    <script src="index.js"></script>
     <script>
         let date;
         let heure;

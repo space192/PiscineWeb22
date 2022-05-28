@@ -1,5 +1,5 @@
 <footer>
-<img src="Images/Decor/LogoOmnesSante.png" alt="Logo omnes santé">
+<img src="images/Decor/LogoOmnesSante.png" alt="Logo omnes santé">
     <div id="FooterCentre">
         <p>© 2022 <a href="mailto:adrien.blair@edu.ece.fr">Adrien BLAIR</a> - <a href="mailto:arthur.fournier@edu.ece.fr">Arthur FOURNIER</a> - 
         <a href="mailto:donatien.chevillard@edu.ece.fr">Donatien CHEVILLARD</a> - <a href="mailto:pierrelouis.paillet@edu.ece.fr">Pierre-Louis PAILLET</a> pour OMNES Santé<br>
