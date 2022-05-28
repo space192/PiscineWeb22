@@ -35,14 +35,16 @@
                     $memberStatement = $mysqlConnection->prepare("SELECT * FROM Labo WHERE ID_Labo = $IDL ;");
                     $memberStatement->execute();
                     $resultL = $memberStatement->fetchAll();
-                    
-                    echo('<br>Salle :<br><br>');
+
+                    echo($resultL[0]["Nom"]);
+                    echo('<br><img src="' . $resultL[0]["pp"] . '" style="max-width:300px; max-height:300px"/>');
+                    echo('<br>Salle :<br>');
                     echo($resultL[0]["Localisation"]);
-                    echo('<br><br><br>');
-                    echo('Téléphone<br><br>');
+                    echo('<br><br>');
+                    echo('Téléphone :<br>');
                     echo($resultL[0]["Telephone"]);
-                    echo('<br><br><br>');
-                    echo('Email :<br><br>');
+                    echo('<br><br>');
+                    echo('Email :<br>');
                     echo($resultL[0]["Mail"]);
                     echo('<br><br><br>');
                     
