@@ -24,6 +24,10 @@
                                 <div class="text-center"> <h5>Carte de crédit</h5> </div>
                                 <div class="form mt-3">
                                     <form method="post" action="querryPaiement.php">
+                                        <input hidden id="date" name="date"/>
+                                        <input hidden id="heure" name="heure"/>
+                                        <input hidden id="plageHorraire" name="test1"/>
+                                        <input hidden id="RDV" name="RDV"/>
                                         <div class="inputbox"> <input type="text" name="name" class="form-control" required="required">
                                             <span>Nom du titulaire</span>
                                         </div>

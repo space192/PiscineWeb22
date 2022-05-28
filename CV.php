@@ -76,7 +76,7 @@
             color: var(--textBase);
         }
     </style>
-    <script src="Index.js"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>

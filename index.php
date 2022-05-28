@@ -5,7 +5,7 @@
         <title>OMNES Santé : Les RDV de vos professionnels de santé</title>
         <meta name="description" content="Prenez facilement rendez-vous avec vos professionnels de santé et communiquez avec eux en direct.">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="Index.css">
         <link rel="stylesheet" href="Homepage.css">
         <link rel="icon" href="images/Decor/LogoOmnesSante2.ico">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -49,7 +49,7 @@
             </section>
         </div>
         <?php include 'footer.php' ?>
-        <script src="Index.js"></script>
+        <script src="index.js"></script>
         <script src="Homepage.js"></script>
     </body>
 </html>

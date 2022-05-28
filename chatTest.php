@@ -29,7 +29,7 @@
             </section>
         </div>
         <?php include 'footer.php' ?>
-        <script src="Index.js"></script>
+        <script src="index.js"></script>
         <script src="Homepage.js"></script>
     </body>
 </html>

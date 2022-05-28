@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style2.css">
     <link rel="stylesheet" href="Index.css">
-    <script src="Index.js"></script>
+    <script src="index.js"></script>
     <script src="Account.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <link rel="icon" href="images/Decor/LogoOmnesSante2.ico">

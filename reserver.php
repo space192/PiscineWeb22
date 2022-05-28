@@ -20,7 +20,6 @@
         header('Location: index.php');
         die();
     }
-    
     if ($_COOKIE["RDV"]==2)
     {
         include_once 'const.php';
@@ -41,7 +40,4 @@
         header('Location: index.php');
         die();
     }
-
-    
-
 ?>

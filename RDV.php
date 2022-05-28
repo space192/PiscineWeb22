@@ -16,18 +16,24 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/c6c9e611bb.js" crossorigin="anonymous"></script>
-    <script src="Index.js"></script>
-    <script>    
+    <script src="index.js"></script>
+    <script>
+        let date;
+        let heure;
         function reserver() {
                 
                 //location.href = "Paiement.php";
                 //location.href = "reserver.php";
-                let date = event.target.getAttribute('data-arg1');
-                let heure = event.target.getAttribute('data-arg2');
+                date = event.target.getAttribute('data-arg1');
+                heure = event.target.getAttribute('data-arg2');
                 document.cookie = "Heure=" + heure + "; SameSite=None; Secure";
                 document.cookie = "Date=" + date + "; SameSite=None; Secure";
                 document.cookie = "RDV=" + '1' + "; SameSite=None; Secure";
-                alert("Rendez-vous le " + date + " à " + heure + " selectionné!");    
+                alert("Rendez-vous le " + date + " à " + heure + " selectionné!");
+                document.getElementById("date").value = date;
+                document.getElementById("heure").value = heure;
+                document.getElementById("plageHorraire").value = $_COOKIE["test1"];
+                document.getElementById("RDV").value = '1';
                        
         }
 
@@ -142,7 +148,7 @@
         </table>
         <br>
     <div id="boutonPayer">
-        <?php include_once 'paiement.php' ?>
+        <?php include 'Paiement.php' ?>
     </div>
     </section>
     <?php include 'footer.php' ?>
