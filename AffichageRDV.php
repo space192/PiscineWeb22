@@ -20,7 +20,7 @@
         function effacer(t) {
 
             
-                if(confirm("Voullez vous annulez ce rendez-vous?"))
+                if(confirm("Voulez vous annulez ce rendez-vous?"))
                 {
                     let date = event.target.getAttribute('data-arg1');
                     document.cookie = "DateEff=" + date+ "; SameSite=None; Secure";
@@ -81,7 +81,7 @@
                     echo ('<div class="detailsProfil">');
                     echo('<div class="titre">');
                     echo('Votre practicien : <br>');
-                    echo($data[0]["Nom"] . $data[0]["Prenom"]);
+                    echo($data[0]["Prenom"] . " ". $data[0]["Nom"]);
                     echo ('</div>');
                     echo ('<div class="photoProfil">');
                     echo ('<img src="' . $data[0]["pp"] . '" class="image">');
