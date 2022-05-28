@@ -32,6 +32,8 @@
                 alert("Rendez-vous le " + date + " à " + heure + " selectionné!");
                 document.getElementById("date").value = date;
                 document.getElementById("heure").value = heure;
+                document.getElementById("plageHorraire").value = $_COOKIE["test1"];
+                document.getElementById("RDV").value = '1';
                        
         }
 

@@ -11,16 +11,16 @@ else if(isset($_SESSION["LOGGED"]))
 $subject = "RDV confirmé le " . $_POST["date"] . " à " . $_POST["heure"];
 $message = "Votre rendez-vous est confirmé. En cas d'imprévu, pensez à le déplacer ou l'annuler le plus tôt possible.\nCordialement,\nL’équipe OMNES Santé";
 mail($to,$subject,$message);
-if ($_COOKIE["RDV"]==1)
+if ($_POST["RDV"]==1)
     {
         include_once 'const.php';
         include 'queryAccount.php' ;
         $resultU = getAccount() ;
         $idU = $resultU["ID"];
 
-        $value1 = substr($_COOKIE["test1"],13);
+        $value1 = substr($_POST["test1"],13);
         $value2 = $idU;
-        $value3=date($_COOKIE["Date"] . ' ' . $_COOKIE["Heure"]);
+        $value3=date($_POST["Date"] . ' ' . $_POST["Heure"]);
         $value4 = 1;
         $value5 = "Pas d'infos";
         
@@ -32,17 +32,17 @@ if ($_COOKIE["RDV"]==1)
         header('Location: index.php');
         die();
     }
-    if ($_COOKIE["RDV"]==2)
+    if ($_POST["RDV"]==2)
     {
         include_once 'const.php';
         include 'queryAccount.php' ;
         $resultU = getAccount() ;
         $idU = $resultU["ID"];
 
-        $value1 = $_COOKIE["IDL"];
+        $value1 = $_POST["IDL"];
         $value2 = $idU;
-        $value3 = $_COOKIE["IDS"];
-        $value4=date($_COOKIE["Date"] . ' ' . $_COOKIE["Heure"]);
+        $value3 = $_POST["IDS"];
+        $value4=date($_POST["Date"] . ' ' . $_POST["Heure"]);
         
         
         
