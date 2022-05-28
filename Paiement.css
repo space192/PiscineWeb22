@@ -185,7 +185,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button
     color: var(--textBase);
 }
 
-.form-control
+.form-control, .form-select
 {
     border: none;
     outline: none;
