@@ -23,21 +23,48 @@
                             <div class="mt-4 mx-4">
                                 <div class="text-center"> <h5>Carte de crédit</h5> </div>
                                 <div class="form mt-3">
-                                    <div class="inputbox"> <input type="text" name="name" class="form-control" required="required">
-                                        <span>Nom du titulaire</span>
-                                    </div>
-                                    <div class="inputbox">
-                                        <input type="text" name="name" min="1" max="999" class="form-control" required="required">
-                                        <span>Numéro de la carte</span>
-                                        <i class="fa fa-eye"></i>
-                                    </div>
-                                    <div class="d-flex flex-row">
-                                        <div class="inputbox"> <input type="text" name="name" min="1" max="999" class="form-control" required="required"> <span>Date d'expiration</span> </div>
-                                        <div class="inputbox"> <input type="text" name="name" min="1" max="999" class="form-control" required="required"> <span>CVV</span> </div>
-                                    </div>
-                                    <div class="px-5 pay">
-                                        <button class="btn btn-success btn-block" onclick="location.href='reserver.php'">Payer</button>
-                                    </div>
+                                    <form method="post" action="querryPaiement.php">
+                                        <div class="inputbox"> <input type="text" name="name" class="form-control" required="required">
+                                            <span>Nom du titulaire</span>
+                                        </div>
+                                        <div class="inputbox">
+                                            <input type="text" name="name" minlength="16" maxlength="16" class="form-control" required="required" pattern="^[0-9]*$">
+                                            <span>Numéro de la carte</span>
+                                            <i class="fa fa-eye"></i>
+                                        </div>
+                                        <div class="d-flex flex-row">
+                                            <select class="form-select" name='expireMM' id='expireMM' required>
+                                                <option value=''>Mois</option>
+                                                <option value='01'>Janvier</option>
+                                                <option value='02'>Février</option>
+                                                <option value='03'>Mars</option>
+                                                <option value='04'>Avril</option>
+                                                <option value='05'>Mai</option>
+                                                <option value='06'>Juin</option>
+                                                <option value='07'>Juillet</option>
+                                                <option value='08'>Août</option>
+                                                <option value='09'>Septembre</option>
+                                                <option value='10'>Octobre</option>
+                                                <option value='11'>Novembre</option>
+                                                <option value='12'>Décembre</option>
+                                            </select>
+                                            <select class="form-select" name='expireYY' id='expireYY' required>
+                                                <option value=''>Année</option>
+                                                <option value='22'>2022</option>
+                                                <option value='23'>2023</option>
+                                                <option value='24'>2024</option>
+                                                <option value='24'>2025</option>
+                                                <option value='24'>2026</option>
+                                                <option value='24'>2027</option>
+                                            </select>
+                                            <input class="inputCard" type="hidden" name="expiry" id="expiry" maxlength="4"/>
+                                            <!--<div class="inputbox"> <input type="date" name="name"  class="form-control" required="required"> <span>Date d'expiration</span> </div>-->
+                                            <div class="inputbox"> <input type="text" name="name" minlength="3" maxlength="3" class="form-control" required="required" pattern="^[0-9]*$"> <span>CVV</span> </div>
+                                        </div>
+                                        <div class="px-5 pay">
+                                            <button class="btn btn-success btn-block" type="submit">Payer</button>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
