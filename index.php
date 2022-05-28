@@ -15,7 +15,7 @@
     </head>
     <body>
         <div id="Toutenhaut">
-            <div id="GrosLogo"><div><a href="index.php"><img src="images/Decor/LogoOmnesSante2.png" alt="Omnes Santé" width="100px" height="100px"> OMNES Santé</a></div></div>>
+            <div id="GrosLogo"><div><a href="index.php"><img src="images/Decor/LogoOmnesSante2.png" alt="Omnes Santé" width="100px" height="100px"> OMNES Santé</a></div></div>
             <div id="Darkmode"><button onclick="switchTheme();" title="Changer de thème de couleur">◐</button></div>
         <?php include 'Caroussel.php'?>
         </div>
