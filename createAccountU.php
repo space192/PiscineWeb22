@@ -76,7 +76,11 @@
         </div>
         <br>
         <input hidden name="query" value="1" />
+
+        <div class="g-recaptcha" data-sitekey="6Ld-MiogAAAAAKHJaXqQAhIuJKm4yqOsfhmI5ymC"></div>
+
         <!-- Submit button -->
         <button type="submit" class="btn btn-light btn-block mb-4">S'inscrire</button>
     </form>
 </div>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
