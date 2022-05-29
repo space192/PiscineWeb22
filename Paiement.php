@@ -80,8 +80,8 @@
                                     <input type="hidden" name="no_note" value="1">
                                     <input type="hidden" name="no_shipping" value="1">
                                     <input type="hidden" name="rm" value="1">
-                                    <input type="hidden" name="return" value="http://localhost/piscineweb22/AffichageRDV.php">
-                                    <input type="hidden" name="cancel_return" value="http://localhost/piscineweb22/index.php">
+                                    <input type="hidden" name="return" value="http://localhost/code/piscineweb22/querryPaiement.php">
+                                    <input type="hidden" name="cancel_return" value="http://localhost/code/piscineweb22/index.php">
                                     <input type="hidden" name="currency_code" value="EUR">
                                     <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHosted">
                                 <table>
@@ -101,7 +101,6 @@
                                     <input type="image" src="https://www.paypalobjects.com/fr_FR/FR/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal, le réflexe sécurité pour payer en ligne">
                                     <img alt="" border="0" src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
                                 </form>
-
                             </div>
                         </div>
                     </div>

@@ -24,13 +24,15 @@
                 //location.href = "reserver.php";
                 let date = event.target.getAttribute('data-arg1');
                 let heure = event.target.getAttribute('data-arg2');
-                document.cookie = "Heure=" + heure + "; SameSite=None; Secure";
-                document.cookie = "Date=" + date + "; SameSite=None; Secure";
-                document.cookie = "RDV=" + '1' + "; SameSite=None; Secure";
-                alert("Rendez-vous le " + date + " à " + heure + " selectionné!");    
-                       
+                var now = new Date();
+                var time = now.getTime();
+                var expireTime = time + 1000*36000;
+                now.setTime(expireTime);
+                document.cookie = "Heure=" + heure + "; expires="+now.toUTCString();
+                document.cookie = "Date=" + date + "; expires="+now.toUTCString();
+                document.cookie = "RDV=" + '1' + "; expires="+now.toUTCString();
+                alert("Rendez-vous le " + date + " à " + heure + " selectionné!");
         }
-
         function payer() {
                 
                 location.href = "Paiement.php";
@@ -142,7 +144,7 @@
         </table>
         <br>
     <div id="boutonPayer">
-        <?php include_once 'paiement.php' ?>
+        <?php include 'paiement.php' ?>
     </div>
     </section>
     <?php include 'footer.php' ?>
