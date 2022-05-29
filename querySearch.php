@@ -23,6 +23,10 @@ if(isset($_POST["search"]) && $_POST["search"] != "")
     $memberStatement = $mysqlConnection->prepare($sql);
     $memberStatement->execute();
     $resultS = $memberStatement->fetchAll();
+    $sql = "SELECT Medecin.* FROM Medecin JOIN Specialite ON Medecin.spe = Specialite.ID_spe WHERE LOWER(Specialite.Nom_spe) LIKE '%" . $_POST["search"] . "%';";
+    $memberStatement = $mysqlConnection->prepare($sql);
+    $memberStatement->execute();
+    $resultService = $memberStatement->fetchAll();
     echo("<br>");
     echo("<h2>Services</h2>");
     foreach($resultS as $res)
