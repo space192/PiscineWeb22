@@ -23,7 +23,7 @@ if(isset($_POST["search"]) && $_POST["search"] != "")
     $memberStatement = $mysqlConnection->prepare($sql);
     $memberStatement->execute();
     $resultS = $memberStatement->fetchAll();
-    $sql = "SELECT Medecin.*, Specialite.Nom_spe FROM Medecin JOIN Specialite ON Medecin.spe = Specialite.ID_spe WHERE LOWER(Specialite.Nom_spe) LIKE '%" . $_POST["search"] . "%';";
+    $sql = "SELECT Medecin.*, Specialite.Nom_spe, Plage_horraire.dispo FROM Medecin JOIN Specialite ON Medecin.spe = Specialite.ID_spe JOIN Plage_horraire ON Medecin.ID = Plage_horraire.ID_Medecin  WHERE LOWER(Specialite.Nom_spe) LIKE '%" . $_POST["search"] . "%';";
     $memberStatement = $mysqlConnection->prepare($sql);
     $memberStatement->execute();
     $resultService = $memberStatement->fetchAll();
