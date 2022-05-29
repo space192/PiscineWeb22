@@ -38,6 +38,10 @@ if(isset($_POST["search"]) && $_POST["search"] != "")
     echo("<br>");
     echo("<h2>Médecins</h2>");
     echo('<div id="deroulant" style="background-color : var(--fond2);">');
+    foreach($resultService as $res)
+    {
+        card($res);
+    }
     foreach($resultM as $res)
     {
         card($res);
